@@ -1,2 +1,2 @@
 # unity-basic-training
-This repository provides a guide for the basics of Unity3D.
+## h2 This repository provides a guide for the basics of Unity3D.
