@@ -25,6 +25,7 @@ The project settings are a variety of settings that give you the opportunity to 
 
 The Gameobject is the most important concept in Unity as **all** objects in your game are gameobjects. However the gameobjects are nothing on their own. They need to be described by a set of properties that define what they are (characters, lights, UI elements) and what they can do. These properties are called **componets** and different combinations of them constitute discrete kinds of gameobjects. 
 
-### - [Components](https://docs.unity3d.com/Manual/Components.html)
+### - [Components](https://docs.unity3d.com/Manual/UsingComponents.html)
 
+Componets are the functional pieces of Unity that makes things happen. Every Gameobject is in essence a container for components that will define its being and behaviour. The most essential component is the [transform](https://docs.unity3d.com/Manual/class-Transform.html) component. That is because this component defines the existence of a gameobject in space. It gives information about its location, rotation and scale, without such information the gameobject would not exist at all. For this reason every gameobject has a tranform component attached upon creation. 
 
