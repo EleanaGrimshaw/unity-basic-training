@@ -32,3 +32,5 @@ Componets are the functional pieces of Unity that make things happen. Every Game
 ### - [Constraints](https://docs.unity3d.com/Manual/Constraints.html)
 
 Sometimes it is useful to **link** different gameobjects together. The constraints are a set of components and methods that enable this linking. The most popular constraints are the [parent](https://docs.unity3d.com/Manual/class-ParentConstraint.html) and the [look at](https://docs.unity3d.com/Manual/class-LookAtConstraint.html).
+
+## the scene
