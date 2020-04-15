@@ -12,6 +12,10 @@ Unity is a cross-platform game engine created by Unity Technologies. It can be u
 
 The first time you open Unity there is a list of things you need to look into. The first step will be to familiarize yourself with the user interface and more specifically what are the components that constitute it. Make sure you understand your distinct workspaces: the [project window](https://docs.unity3d.com/Manual/ProjectView.html), the [hierarchy window](https://docs.unity3d.com/Manual/Hierarchy.html), the [inspector window](https://docs.unity3d.com/Manual/UsingTheInspector.html), as well as the [scene view](https://docs.unity3d.com/Manual/UsingTheSceneView.html) and the [game view](https://docs.unity3d.com/Manual/GameView.html). 
 
+### - [Build Settings](https://docs.unity3d.com/Manual/BuildSettings.html)
+
+The next thing you need to remember is that Unity can produce applications that run in a variety of platforms. According to your desired target platform, you might need to pay special attention to some of the project settings. If you know what platform you are building for, make sure you set it as target at the begining of your project.
+
 * [User Interface](https://docs.unity3d.com/Manual/UsingTheEditor.html)
 * [Build Settings](https://docs.unity3d.com/Manual/BuildSettings.html)
 * [Project Settings](https://docs.unity3d.com/Manual/comp-ManagerGroup.html)
