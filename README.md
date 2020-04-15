@@ -14,9 +14,9 @@ The first time you open Unity there is a list of things you need to look into. T
 
 ### - [Build Settings](https://docs.unity3d.com/Manual/BuildSettings.html)
 
-The next thing you need to remember is that Unity can produce applications that run in a variety of platforms. According to your desired target platform, you might need to pay special attention to some of the project settings. If you know what platform you are building for, make sure you set it as target at the begining of your project.
+The next thing you need to remember is that Unity can produce applications that run in a variety of platforms. According to your desired target platform, you might need to pay special attention to some of the project settings. If you know what platform you are building for, make sure you set it as target at the begining of your project and then configure the corresponding settings.
 
-* [User Interface](https://docs.unity3d.com/Manual/UsingTheEditor.html)
-* [Build Settings](https://docs.unity3d.com/Manual/BuildSettings.html)
-* [Project Settings](https://docs.unity3d.com/Manual/comp-ManagerGroup.html)
+### - [Project Settings](https://docs.unity3d.com/Manual/comp-ManagerGroup.html)
+
+The project settings are a variety of settings that give you the opportunity to customize your project according to your needs. When you select the target platform of your project the default settings that go with it are quite balanced to get you started, however you might wanna adjust a few things according to your specific needs. The most common settings to adjust are the [player settings](https://docs.unity3d.com/Manual/class-PlayerSettings.html), the [quality settings](https://docs.unity3d.com/Manual/class-QualitySettings.html) and the [physics settings](https://docs.unity3d.com/Manual/class-PhysicsManager.html).
 
