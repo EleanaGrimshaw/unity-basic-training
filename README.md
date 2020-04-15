@@ -1,8 +1,8 @@
-## unity-basic-training
-This repository provides a guide for the basics of Unity3D.
+# Unity basic training
+Author: Eleana Polychronaki
 
-## author:
-Eleana Polychronaki
+## description
+This repository provides a guide for the basics of Unity3D.
 
 ## what is Unity?
 Unity is a cross-platform game engine created by Unity Technologies. It can be used to create both 2D and 3D games, as well as, simulations, immersive experiences and a variety of other apps. Although it is originally a tool to make games it is being used in a variety of other industries including film, engineering, architecture and construction.
@@ -24,3 +24,7 @@ The project settings are a variety of settings that give you the opportunity to 
 ### - [Gameobjects](https://docs.unity3d.com/Manual/class-GameObject.html)
 
 The Gameobject is the most important concept in Unity as **all** objects in your game are gameobjects. However the gameobjects are nothing on their own. They need to be described by a set of properties that define what they are (characters, lights, UI elements) and what they can do. These properties are called **componets** and different combinations of them constitute discrete kinds of gameobjects. 
+
+### - [Components](https://docs.unity3d.com/Manual/Components.html)
+
+
