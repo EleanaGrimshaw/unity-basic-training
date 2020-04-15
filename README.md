@@ -11,3 +11,5 @@ Unity is a cross-platform game engine created by Unity Technologies. It can be u
 * [User Interface](https://docs.unity3d.com/Manual/UsingTheEditor.html)
 * [Project Organization](https://docs.unity3d.com/Manual/ProjectView.html)
 * [Build Settings](https://docs.unity3d.com/Manual/BuildSettings.html)
+* [Project Settings](https://docs.unity3d.com/Manual/comp-ManagerGroup.html)
+> * [Player Settings](https://docs.unity3d.com/Manual/comp-ManagerGroup.html)
