@@ -29,3 +29,6 @@ The Gameobject is the most important concept in Unity as **all** objects in your
 
 Componets are the functional pieces of Unity that make things happen. Every Gameobject is in essence a container for components that will define its being and behaviour. The most essential component is the [transform](https://docs.unity3d.com/Manual/Transforms.html) component. That is because this component defines the existence of a gameobject in space. It gives information about its location, rotation and scale, without such information the gameobject would not exist at all. For this reason every gameobject has a tranform component attached upon creation. Other than that, unity provides a wide variety of components that you can use, however it is quite common to create your own custom components using [scripts](https://docs.unity3d.com/Manual/CreatingAndUsingScripts.html).  
 
+## - [Constraints](https://docs.unity3d.com/Manual/Constraints.html)
+
+Sometimes it is useful to **link** different gameobjects together. The constraints are a set of components and methods that enable this linking. The most popular constraints are the [parent](https://docs.unity3d.com/Manual/class-ParentConstraint.html) and the [look at](https://docs.unity3d.com/Manual/class-LookAtConstraint.html).
