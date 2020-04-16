@@ -7,6 +7,7 @@ Eleana Polychronaki
 * [Unity Manual (2019.3)](https://docs.unity3d.com/Manual/index.html)
 * [Unity Scripting API (2019.3)](https://docs.unity3d.com/ScriptReference/index.html)
 * [Unity Learn](https://learn.unity.com/)
+* [Microsoft .Net C# Documentation](https://docs.microsoft.com/en-us/dotnet/)
 
 **Excercises:**
 1. My First Scene
@@ -80,7 +81,7 @@ When importing geometries from other software, depending on their format, Unity 
 
 ## custom C# components
 
-### - C# essentials
+### - [C# essentials](https://docs.microsoft.com/en-us/dotnet/csharp/)
 * [Variables](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/types-and-variables)
 * [Methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods)
 * [Classes](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes)
