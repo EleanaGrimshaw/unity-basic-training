@@ -40,6 +40,10 @@ Componets are the functional pieces of Unity that make things happen. Every Game
 
 Sometimes it is useful to **link** different gameobjects together. The constraints are a set of components and methods that enable this linking. The most popular constraints are the [parent](https://docs.unity3d.com/Manual/class-ParentConstraint.html) and the [look at](https://docs.unity3d.com/Manual/class-LookAtConstraint.html).
 
+### - [prefabs](https://docs.unity3d.com/Manual/Prefabs.html)
+
+When you have configured and customized a gameobject, adding components and properties according to the needs of your project, Unity gives you the opportunity to store that particular gameobject as an asset. This particular type of asset is called a Prefab. Prefabs are very useful because not only do they allow you to easily generate numerous instances of the same object, but also all of the instances hold a reference to the original prefab. In this way if you change something in the original, all instances will change accordingly.  
+
 ## the scene
 The [scene](https://docs.unity3d.com/Manual/CreatingScenes.html) represents somewhat of a level in your game. It contains all the elements that define your project for this specific level: gameobjects, environments, UI elements, special effects etc. One Unity project can contain main scenes, but you only have one active scene at a time on which you can work. However, your built app can contain a sequence of scenes that the player/user movers through. 
 Every scene has by default a camera and a light. These are the essential elements that you need to get started.
