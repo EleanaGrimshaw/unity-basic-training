@@ -7,6 +7,10 @@ Eleana Polychronaki
 * [Unity Manual (2019.3)](https://docs.unity3d.com/Manual/index.html)
 * [Unity Learn](https://learn.unity.com/)
 
+**Excercises:**
+1. Create a basic scene
+2. Learn how to use meshFilter & meshRenderer
+
 ## description
 This repository provides a guide for the basics of Unity3D.
 
