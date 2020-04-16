@@ -41,4 +41,6 @@ Every scene has by default a camera and a light. These are the essential element
 
 The camera is a gameobject that is responsible for what the player/user sees in the app. For this reason you need **at least one** active camera gameobject on your scene. You can have an unlimited number of cameras in one scene and you can set them to render various things. 
 
-### - [lights]()
+### - [lights](https://docs.unity3d.com/Manual/Lighting.html)
+
+In order to calculate the shading of a GameObject that is affected by lighting, Unity needs to know the intensity, direction, and color of the light that falls on it.
