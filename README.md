@@ -44,3 +44,8 @@ The camera is a gameobject that is responsible for what the player/user sees in 
 ### - [Lights](https://docs.unity3d.com/Manual/Lighting.html)
 
 In order to calculate the shading of a GameObject that is affected by lighting, Unity needs to know the intensity, direction, and color of the light that falls on it. Lights will be further explained in the rendering section of this document.
+
+## geometry objects
+
+The main graphics primitive that Unity uses in order to render geometry is the **mesh**. In order to actually see a geometry in your game you need to attach two components in your gameobject, the [mesh filter](https://docs.unity3d.com/Manual/class-MeshFilter.html) and the [mesh renderer](https://docs.unity3d.com/Manual/class-MeshRenderer.html). The first is responsible for holding the mesh data of your model and provide it to the second, which will in turn be responsible for rendering the geometry in your screen. 
+
