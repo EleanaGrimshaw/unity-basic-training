@@ -1,9 +1,11 @@
 # Unity basic training
 **Author:** 
+
 Eleana Polychronaki
 
 **Resources:**
-* [Unity Manual](https://docs.unity3d.com/Manual/index.html)
+* [Unity Manual (2019.3)](https://docs.unity3d.com/Manual/index.html)
+* [Unity Learn](https://learn.unity.com/)
 
 ## description
 This repository provides a guide for the basics of Unity3D.
