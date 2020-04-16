@@ -23,6 +23,10 @@ The next thing you need to remember is that Unity can produce applications that 
 
 The project settings are a variety of settings that give you the opportunity to customize your project. When you select the target platform of your project the default settings that go with it are quite balanced to get you started, however you might wanna adjust a few things according to your specific needs. The most common settings to adjust are the [player settings](https://docs.unity3d.com/Manual/class-PlayerSettings.html), the [quality settings](https://docs.unity3d.com/Manual/class-QualitySettings.html) and the [physics settings](https://docs.unity3d.com/Manual/class-PhysicsManager.html).
 
+### - [Unity Assets](https://docs.unity3d.com/Manual/AssetTypes.html)
+
+An Asset is a representation of any item you can use in your Project. Such items can either be imported into Unity after having being created in another software/platform or they can be provided from or created within Unity.
+
 ## basic elements
 ### - [Gameobjects](https://docs.unity3d.com/Manual/class-GameObject.html)
 
