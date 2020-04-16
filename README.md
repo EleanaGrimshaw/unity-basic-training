@@ -80,6 +80,13 @@ When importing geometries from other software, depending on their format, Unity 
 
 ## custom C# components
 
+### - C# essentials
+* Variables
+* Functions
+* Classes
+* Loops
+* Conditionals
+
 ### - [Monobehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)
 * [Start](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html)
 * [Update](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html)
