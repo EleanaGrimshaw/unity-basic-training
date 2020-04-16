@@ -81,11 +81,11 @@ When importing geometries from other software, depending on their format, Unity 
 ## custom C# components
 
 ### - C# essentials
-* Variables
-* Functions
-* Classes
-* Loops
-* Conditionals
+* [Variables](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/types-and-variables)
+* [Methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods)
+* [Classes](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes)
+* [Loops](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for)
+* [Conditionals](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/if-else)
 
 ### - [Monobehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)
 * [Start](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html)
