@@ -5,8 +5,8 @@ Eleana Polychronaki
 
 **Resources:**
 * [Unity Manual (2019.3)](https://docs.unity3d.com/Manual/index.html)
+* [Unity Scripting API (2019.3)](https://docs.unity3d.com/ScriptReference/index.html)
 * [Unity Learn](https://learn.unity.com/)
-* [Unity Scripting API](https://docs.unity3d.com/ScriptReference/index.html)
 
 **Excercises:**
 1. My First Scene
