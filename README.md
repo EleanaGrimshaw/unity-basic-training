@@ -7,7 +7,7 @@ Eleana Polychronaki
 * [Unity Manual (2019.3)](https://docs.unity3d.com/Manual/index.html)
 * [Unity Learn](https://learn.unity.com/)
 
-## description
+## > description
 This repository provides a guide for the basics of Unity3D.
 
 ## what is Unity?
