@@ -40,7 +40,7 @@ Componets are the functional pieces of Unity that make things happen. Every Game
 
 Sometimes it is useful to **link** different gameobjects together. The constraints are a set of components and methods that enable this linking. The most popular constraints are the [parent](https://docs.unity3d.com/Manual/class-ParentConstraint.html) and the [look at](https://docs.unity3d.com/Manual/class-LookAtConstraint.html).
 
-### - [prefabs](https://docs.unity3d.com/Manual/Prefabs.html)
+### - [Prefabs](https://docs.unity3d.com/Manual/Prefabs.html)
 
 When you have configured and customized a gameobject, adding components and properties according to the needs of your project, Unity gives you the opportunity to store that particular gameobject as an asset. This particular type of asset is called a Prefab. Prefabs are very useful because not only do they allow you to easily generate numerous instances of the same object, but also all of the instances hold a reference to the original prefab. In this way if you change something in the original, all instances will change accordingly.  
 
