@@ -37,10 +37,10 @@ Sometimes it is useful to **link** different gameobjects together. The constrain
 The [scene](https://docs.unity3d.com/Manual/CreatingScenes.html) represents somewhat of a level in your game. It contains all the elements that define your project for this specific level: gameobjects, environments, UI elements, special effects etc. One Unity project can contain main scenes, but you only have one active scene at a time on which you can work. However, your built app can contain a sequence of scenes that the player/user movers through. 
 Every scene has by default a camera and a light. These are the essential elements that you need to get started.
 
-### - [camera](https://docs.unity3d.com/Manual/class-Camera.html)
+### - [Camera](https://docs.unity3d.com/Manual/class-Camera.html)
 
 The camera is a gameobject that is responsible for what the player/user sees in the app. For this reason you need **at least one** active camera gameobject on your scene. You can have an unlimited number of cameras in one scene and you can set them to render various things. 
 
-### - [lights](https://docs.unity3d.com/Manual/Lighting.html)
+### - [Lights](https://docs.unity3d.com/Manual/Lighting.html)
 
-In order to calculate the shading of a GameObject that is affected by lighting, Unity needs to know the intensity, direction, and color of the light that falls on it.
+In order to calculate the shading of a GameObject that is affected by lighting, Unity needs to know the intensity, direction, and color of the light that falls on it. Lights will be further explained in the rendering section of this document.
