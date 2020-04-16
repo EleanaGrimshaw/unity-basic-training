@@ -1,5 +1,8 @@
 # Unity basic training
-Author: Eleana Polychronaki
+Author: 
+Eleana Polychronaki
+Resources:
+* [Unity Manual](https://docs.unity3d.com/Manual/index.html)
 
 ## description
 This repository provides a guide for the basics of Unity3D.
