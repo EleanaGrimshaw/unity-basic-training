@@ -8,8 +8,8 @@ Eleana Polychronaki
 * [Unity Learn](https://learn.unity.com/)
 
 **Excercises:**
-1. Create a basic scene
-2. Learn how to use meshFilter & meshRenderer
+1. My First Scene
+2. MeshFilter & MeshRenderer
 
 ## description
 This repository provides a guide for the basics of Unity3D.
