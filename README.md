@@ -23,11 +23,14 @@ Unity 2019.3
 This repository provides a guide for the basics of Unity3D.
 
 ## contents
+### introduction
 * [what is unity](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#what-is-unity)
 * [getting started](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#getting-started)
+### level 1 (exercises 1 & 2)
 * [basic elements](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#basic-elements)
 * [the scene](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#the-scene)
 * [geometry in Unity](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#geometry-in-unity)
+### level 2 (exercises 3 & 4)
 * [custom C# components](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#custom-c-components)
 
 ---
