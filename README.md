@@ -12,6 +12,7 @@ Eleana Polychronaki
 **Excercises:**
 1. My First Scene
 2. MeshFilter & MeshRenderer
+3. C# components
 
 ## description
 This repository provides a guide for the basics of Unity3D.
