@@ -98,3 +98,7 @@ When importing geometries from other software, depending on their format, Unity 
 ### - [Input System](https://docs.unity3d.com/ScriptReference/Input.html)
 
 Unity provides a series of methods through which you can easily check if various inputs of your computer (and other devices) have been interacted with. Such devices can be your [mouse position](https://docs.unity3d.com/ScriptReference/Input-mousePosition.html), the [mouse buttons](https://docs.unity3d.com/ScriptReference/Input.GetButtonDown.html) as well as any [key](https://docs.unity3d.com/ScriptReference/Input.GetKeyDown.html) in your keyboard.
+
+### - Interact with Gameobjects
+
+Another popular way of triggering things in Unity is to detect the interaction of the user with the scene's gameobjects. This is possible through [raycasting](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html). The way this works is by casting a ray from a certain position in space towards a certain direction and for a set distance and checking if this ray hit any collider objects. The raycast itself is a boolean which means it returns true or false depending on whether it found a collision, but it also allows access to other properties of the collison through the [Raycasthit](https://docs.unity3d.com/ScriptReference/RaycastHit.html) such as the hitting point, the distance form the origin etc.
