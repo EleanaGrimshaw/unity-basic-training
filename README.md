@@ -85,6 +85,8 @@ The main graphics primitive that Unity uses in order to render geometry is the *
 
 When importing geometries from other software, depending on their format, Unity automatically creates an asset that holds the necessary information (mesh, materials, colors) and creates a gameobject that already has the corresponding mesh filter and mesh renderer components attached. You have the opportunity to change some of the geometry properties when importing it through the [import settings window](https://docs.unity3d.com/Manual/class-FBXImporter.html).
 
+> Exercises 1 & 2
+
 ## custom C# components
 
 ### - [C# essentials](https://docs.microsoft.com/en-us/dotnet/csharp/)
