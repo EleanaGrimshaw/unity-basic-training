@@ -3,6 +3,10 @@
 
 Eleana Polychronaki
 
+**Platform:**
+
+Unity 2019.3
+
 **Resources:**
 * [Unity Manual (2019.3)](https://docs.unity3d.com/Manual/index.html)
 * [Unity Scripting API (2019.3)](https://docs.unity3d.com/ScriptReference/index.html)
