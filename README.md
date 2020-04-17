@@ -88,6 +88,8 @@ When importing geometries from other software, depending on their format, Unity 
 * [Loops](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for)
 * [Conditionals](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/if-else)
 
+![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/class2.jpg)
+
 ### - [Monobehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)
 * [Start](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html)
 * [Update](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html)
