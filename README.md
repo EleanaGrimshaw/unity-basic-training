@@ -94,3 +94,7 @@ When importing geometries from other software, depending on their format, Unity 
 ### - [Monobehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)
 * [Start](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html)
 * [Update](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html)
+
+### - [Input System](https://docs.unity3d.com/ScriptReference/Input.html)
+
+Unity provides a series of methods through which you can easily check if various inputs of your computer (and other devices) have been interacted with. Such devices can be your [mouse position](https://docs.unity3d.com/ScriptReference/Input-mousePosition.html), the [mouse buttons](https://docs.unity3d.com/ScriptReference/Input.GetButtonDown.html) as well as any [key](https://docs.unity3d.com/ScriptReference/Input.GetKeyDown.html) in your keyboard.
