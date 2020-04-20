@@ -181,3 +181,14 @@ The Raycast method has many [overloads](https://www.geeksforgeeks.org/c-sharp-me
 The code above, will store the selected gameobject inside the attractor variable if the ray collides with a cube and will print in the [console](https://docs.unity3d.com/Manual/Console.html) the name of the cube it collided with. Otherwise it will just print that the ray did not hit any objects.
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/raycasting.gif)
+
+* #### step 5 - color cubes based on vicinity to attractor
+This step requires two sub-steps, the first is to calculate the distance that each of the cubes has from the current attractor and the 
+second is to change the color accordingly. We will do the first step inside out CubsManager script and we will do the second step inside our CubeHandler script that the cube prefab already has attached. 
+
+![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/prefab2.JPG)
+
+We start by creating a new method in our CubesManager component that we will call "DistanceFromAttractor". This method will take two parameters:
+1. a GameObject parameter which will be the current attractor gameobject
+2. a float parameter which will be the maximum distance two cubes can have with each other. (we can calculate this, but for the moment we will just set it by approximation)
+
