@@ -143,7 +143,7 @@ void Update()
     }
 }
 ```
-Similar to they way we detected if a key has been pressed, we check if the player has clicked the left mouse button. If this condition is true we move forward into creating a ray that begins from the mouse position and goes straight into the 3D space of our scene. 
+Similar to the way we detected if a key has been pressed, we check if the player has clicked the [left mouse button](https://docs.unity3d.com/ScriptReference/Input.GetMouseButtonDown.html). If this condition is true we move forward into creating a ray that begins from the mouse position and goes straight into the 3D space of our scene. 
 The next step is to actually test if this ray hit an object. 
 ```csharp
 // create Ray variable which will hold the ray from mouse position towards the scene on left-click
