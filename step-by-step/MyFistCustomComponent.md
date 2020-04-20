@@ -11,9 +11,9 @@ Create your C# component through Assets>Create>C# Script. Right click your newly
 
 * #### step 2
 Add two new public variables which hols the start material and the new material. Name those variables accordingly
-'
+```
 public class CubeHandler : MonoBehaviour
 {
     public Material start_material;
     public Material new_material;
-'
+```
