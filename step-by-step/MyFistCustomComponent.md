@@ -34,7 +34,7 @@ void Start()
 Notice how we use the word "gameObject" to access the MeshRenderer component. The "gameObject" word refers to the current gameObject instance that our CubeHandler script is attached on. 
 
 * #### step 4
-We said that this component will change the gameobject's material with a hit of a key. Consequently, the next thing we need to do is to check **if** this key has been pressed. We need to be able to perform this chack at any point during our game. For that reason we are now going to write inside the Update() method of our gameobject which is executed **once every frame** for as long as our game is running. 
+We said that this component will change the gameobject's material with a hit of a key. Consequently, the next thing we need to do is to check **if** this key has been pressed. We need to be able to perform this check at any point during our game. For that reason we are now going to write inside the Update() method of our gameobject which is executed **once every frame** for as long as our game is running. 
 ```
  void Update()
     {
@@ -44,3 +44,4 @@ We said that this component will change the gameobject's material with a hit of 
         }
     }
 ```
+   [- see more for Unity Input System](https://docs.unity3d.com/ScriptReference/Input.html)
