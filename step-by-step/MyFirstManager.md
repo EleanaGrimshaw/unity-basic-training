@@ -165,4 +165,7 @@ void Update()
     }
 }
 ```
-The Raycast method has many [overloads](https://www.geeksforgeeks.org/c-sharp-method-overloading/)
+The Raycast method has many [overloads](https://www.geeksforgeeks.org/c-sharp-method-overloading/), the one which is more suitable for our case takes:
+1. the ray that we constructed for the mouse position on the screen
+2. a RaycastHit variable that will hold all the information in case of a collision with some object passed with the [out parameter](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier)
+3. the maximum distance this ray will travel
