@@ -119,3 +119,10 @@ void Start()
 ```
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/random%20cubes.JPG)
+
+* #### step 4 - define attractor cube
+The next step is to enable the player to **select** the attractor among all these random cubes. We will achieve this through a process called raycasting. [Raycasting](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) is part of the built in physics engine that unity has and it enables us to cast a ray from a given point in space, towards a given direction and check if this ray collided with any objects in the scene. 
+
+In our random cubes example, we want to be able to tell which cube the player selected with his/her mouse. In order to be able to do that we will implement a very useful method available in the Camera class called [ScreenPointToRay](https://docs.unity3d.com/ScriptReference/Camera.ScreenPointToRay.html). This method creates a ray that starts from the camera 
+
+![Image](https://dpzbhybb2pdcj.cloudfront.net/hocking2/Figures/c03-2.png)
