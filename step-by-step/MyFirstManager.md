@@ -150,6 +150,8 @@ The next step is to actually test if this ray hit an object.
 Ray ray;
 // create RaycastHit variable that will hold the raycasting data from the collision with an object
 RaycastHit hit;
+// create a GameObject variable that will hold the selected attractor cube
+GameObject attractor;
 
 void Update()
 {
@@ -160,7 +162,13 @@ void Update()
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if(Physics.Raycast(ray,out hit, Mathf.Infinity) == true)
         {
-            
+            // find out which object was hit, this cube will be our attractor
+            attractor = hit.transform.gameObject;
+            print("hit "+ attractor.name);
+        }
+        else
+        {
+            print("no objects were hit");
         }
     }
 }
@@ -169,3 +177,5 @@ The Raycast method has many [overloads](https://www.geeksforgeeks.org/c-sharp-me
 1. the ray that we constructed for the mouse position on the screen
 2. a RaycastHit variable that will hold all the information in case of a collision with some object passed with the [out parameter](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier)
 3. the maximum distance this ray will travel
+
+The code above, will store the selected gameobject inside the attractor variable if the ray collides with a cube and will print in the console the name of the cube it collided with. Otherwise it will just print that the ray did not hit any objects.
