@@ -178,6 +178,6 @@ The Raycast method has many [overloads](https://www.geeksforgeeks.org/c-sharp-me
 2. a RaycastHit variable that will hold all the information in case of a collision with some object passed with the [out parameter](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier)
 3. the maximum distance this ray will travel
 
-The code above, will store the selected gameobject inside the attractor variable if the ray collides with a cube and will print in the console the name of the cube it collided with. Otherwise it will just print that the ray did not hit any objects.
+The code above, will store the selected gameobject inside the attractor variable if the ray collides with a cube and will print in the [console](https://docs.unity3d.com/Manual/Console.html) the name of the cube it collided with. Otherwise it will just print that the ray did not hit any objects.
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/raycasting.gif)
