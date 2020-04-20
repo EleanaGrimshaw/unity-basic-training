@@ -107,4 +107,4 @@ First we creat the random values for x, y and z and created a Vector3 which woul
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/hierarchy_parenting.jpg)
 
-You can see in the Hierarchy view the difference between having the new cubes as children of the manager or as standalone gameobjects.
+You can see in the Hierarchy view the difference between having the new cubes as children of the manager (left) or as standalone gameobjects (right).
