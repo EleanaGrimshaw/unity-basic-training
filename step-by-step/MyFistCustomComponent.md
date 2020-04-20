@@ -117,3 +117,30 @@ This variable will be responsible for storing the current material our cobe game
     }
 ```
 We used an "if...else" statement this time. This means that we defined an action to be executed when our conditional is met and an action to be executed if our conditional is not met. If you save and play the game now you will be able to interchange between the two materials by hitting "D".
+
+* #### step 7 - create a method 
+Methods are bits of code that are responsible for performing some action. They can either return a value back or they can be void. We will now enclose our previous code of interchaning materials inside a method. Let's call this method "ChangeMaterial"
+```
+ void Update()
+ {
+    ChangeMaterial();
+ }
+
+ public void ChangeMaterial()
+ {
+     // get the material the gameobject has now
+     current_material = gameObject.GetComponent<MeshRenderer>().sharedMaterial;
+
+     // check if the current material is the new material
+     if (current_material == new_material )
+     {
+         // if it is, we will change the material back to the start_material
+         gameObject.GetComponent<MeshRenderer>().sharedMaterial = start_material;
+     }
+     else
+     {
+         // if it isn't, we will change the material to the new material
+         gameObject.GetComponent<MeshRenderer>().sharedMaterial = new_material;
+     }
+       
+ }
