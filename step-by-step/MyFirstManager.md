@@ -41,8 +41,8 @@ for(int i=0; i<cube_count; i++)
 ```
 
 Our for loop states that it creates an integer "i" with an initial value equal to 0. It will check in every iteration if this integer is smaller that the desired number of cubes we have set (cube_count) and finally, in every iteration it will increase i by 1. 
-```
-i++ is equal to i = i + 1
+```csharp
+// i++ is equal to i = i + 1
 ```
 Consequently, our for loop will perform a number of iterations equal to the cube_count.
 
