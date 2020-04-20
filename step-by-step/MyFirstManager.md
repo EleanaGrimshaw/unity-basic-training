@@ -123,6 +123,23 @@ void Start()
 * #### step 4 - define attractor cube
 The next step is to enable the player to **select** the attractor among all these random cubes. We will achieve this through a process called raycasting. [Raycasting](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) is part of the built in physics engine that unity has and it enables us to cast a ray from a given point in space, towards a given direction and check if this ray collided with any objects in the scene. 
 
-In our random cubes example, we want to be able to tell which cube the player selected with his/her mouse. In order to be able to do that we will implement a very useful method available in the Camera class called [ScreenPointToRay](https://docs.unity3d.com/ScriptReference/Camera.ScreenPointToRay.html). This method creates a ray that starts from the camera 
+In our random cubes example, we want to be able to tell which cube the player selected with his/her mouse. In order to be able to do that we will implement a very useful method available in the Camera class called [ScreenPointToRay](https://docs.unity3d.com/ScriptReference/Camera.ScreenPointToRay.html). This method creates a ray that starts from the camera and goes towards the 3D scene through a specific location in the screen. 
 
 ![Image](https://dpzbhybb2pdcj.cloudfront.net/hocking2/Figures/c03-2.png)
+
+We will define this specific location on the screen to be the position that the mouse has when we click the mouse's left button. 
+
+```
+// create Ray variable which will hold the ray from mouse position towards the scene on left-click
+Ray ray;
+
+void Update()
+{
+    // Raycasting to interact with generated cubes and point out the attractor point
+    if (Input.GetMouseButtonDown(0) == true)
+    {
+        //1. create ray from mouse position - transform screen position where our mouse is to a ray towards our scene
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    }
+}
+```
