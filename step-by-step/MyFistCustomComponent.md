@@ -121,11 +121,6 @@ We used an "if...else" statement this time. This means that we defined an action
 * #### step 7 - create a method 
 Methods are bits of code that are responsible for performing some action. They can either return a value back or they can be void. We will now enclose our previous code of interchaning materials inside a method. Let's call this method "ChangeMaterial"
 ```
- void Update()
- {
-    ChangeMaterial();
- }
-
  public void ChangeMaterial()
  {
      // get the material the gameobject has now
@@ -143,4 +138,15 @@ Methods are bits of code that are responsible for performing some action. They c
          gameObject.GetComponent<MeshRenderer>().sharedMaterial = new_material;
      }
        
+ }
+ ```
+ 
+ Now we can replace all the code in our Update method that was responsible for the material handling with this method:
+ ```
+ void Update()
+ {
+    if (Input.GetKeyDown(KeyCode.D))
+    {
+        ChangeMaterial();
+    }
  }
