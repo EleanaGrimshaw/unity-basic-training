@@ -104,3 +104,7 @@ public void GenerateRandomCubes()
     }
 ```
 First we creat the random values for x, y and z and created a Vector3 which would be the position of the new cube. Then we create a new instance of our cube [prefab](https://docs.unity3d.com/Manual/Prefabs.html) using the [Instantiate](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html) method of the Object class. We set the Vector3 we created as the position of the new cube and we set its scale to a uniform (1,1,1). We name our new object using the value of our iterator i. Finally, we make the new cube gameobject a **child** of the current Transform which is the one attached to our manager gameObject.
+
+![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/hierarchy_parenting.jpg)
+
+You can see in the Hierarchy view the difference between having the new cubes as children of the manager or as standalone gameobjects.
