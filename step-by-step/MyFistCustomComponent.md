@@ -11,7 +11,7 @@ Create a new cube gameobject in your scene. Create your C# component through Ass
 
 * #### step 2 - add custom variables
 Add two new public variables which will hold the start material and the new material. Name those variables accordingly and hit save. Notice how these two variables have appeared in the Inspector on your new custom component.
-```
+```csharp
 public class CubeHandler : MonoBehaviour
 {
     public Material start_material;
@@ -25,7 +25,7 @@ The first thing you need to do, is read and store the material your gameobject a
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/meshrenderer.JPG)
 
 We can get and store the material of the current gameobject like that:
-```
+```csharp
 void Start()
     {
        start_material = gameObject.GetComponent<MeshRenderer>().sharedMaterial;
@@ -35,7 +35,7 @@ Notice how we use the word "gameObject" to access the MeshRenderer component. Th
 
 * #### step 4 - check user input/first conditional
 We said that this component will change the gameobject's material with a hit of a key. Consequently, the next thing we need to do is to check **if** this key has been pressed. We need to be able to perform this check at any point during our game. For that reason we are now going to write inside the Update() method of our gameobject which is executed **once every frame** for as long as our game is running. 
-```
+```csharp
  void Update()
     {
         if(Input.GetKeyDown(KeyCode.D))
@@ -46,7 +46,7 @@ We said that this component will change the gameobject's material with a hit of 
 ```
    
 This is our first "if" statement. Its job is to check if a condition is met and perform a corresponfing specified action. Its syntax and logic behind it is the following:
-```
+```csharp
 /// logic behind if statement -- not actual code
 
 if(my condition is met)
@@ -55,7 +55,7 @@ if(my condition is met)
 }
 ```
 for example we could test
-```
+```csharp
 int number = 5;
 
 if(number<9)
@@ -70,7 +70,7 @@ In our CubeHandler component case, we are testing if the Key "D" was pressed by 
    
 * #### step 5 - change cube material if key was pressed
 Similarly to how we stored the cube's existing material inside a Material variable during Start(), we are now going to **set** the cube's material instead. We are going to set it to the new_material.
-```
+```csharp
  void Update()
     {
         if(Input.GetKeyDown(KeyCode.D))
@@ -84,7 +84,7 @@ Similarly to how we stored the cube's existing material inside a Material variab
 * #### step 6 - interchange between the two materials - second conditional
 You will notice that if you play the game, you will be in fact able to change the cube's material to the new_material. However nothing will happen if you keep pressing the "D" key. The next step is to be able to interchange between the two materials. 
 We will create a new Material variable called "current_material"
-```
+```csharp
 public class CubeHandler : MonoBehaviour
 {
     public Material start_material;
@@ -95,7 +95,7 @@ public class CubeHandler : MonoBehaviour
 ```
 
 This variable will be responsible for storing the current material our cobe gameobject has. We adjust our previous code as follows
-```
+```csharp
  void Update()
     {
         if(Input.GetKeyDown(KeyCode.D))
@@ -121,7 +121,7 @@ We used an "if...else" statement this time. This means that we defined an action
 
 * #### step 7 - create a method 
 Methods are bits of code that are responsible for performing some action. They can either return a value back or they can be void. We will now enclose our previous code of interchaning materials inside a method. Let's call this method "ChangeMaterial"
-```
+```csharp
  public void ChangeMaterial()
  {
      // get the material the gameobject has now
@@ -143,7 +143,7 @@ Methods are bits of code that are responsible for performing some action. They c
  ```
  
  Now we can replace all the code in our Update method that was responsible for the material handling with our new method:
- ```
+ ```csharp
  void Update()
  {
     if (Input.GetKeyDown(KeyCode.D))
