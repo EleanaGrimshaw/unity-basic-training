@@ -26,3 +26,5 @@ public class CubesManager : MonoBehaviour
 }
 ```
 This variables will be set from the Inspector
+
+![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/public%20variables.JPG)
