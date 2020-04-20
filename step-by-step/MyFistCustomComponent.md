@@ -78,4 +78,17 @@ Similarly to how we stored the cube's existing material inside a Material variab
         }
     }
 ```
-   *Be sure to fill the new_material variable with your desired material in the Inspector window. If the new_material is empty you will     get an error*
+   *Be sure to fill the new_material variable with your desired material in the Inspector window. If the new_material is empty, you will     get an error.*
+   
+* #### step 6 - interchange between the two materials - second conditional
+You will notice that if you play the game, you will be in fact able to change the cube's material to the new_material. However nothing will happen if you keep pressing the "D" key. The next step is to be able to interchange between the two materials. 
+We will create a new Material variable called "current_material"
+```
+public class CubeHandler : MonoBehaviour
+{
+    public Material start_material;
+    public Material new_material;
+
+    Material current_material;
+}
+```
