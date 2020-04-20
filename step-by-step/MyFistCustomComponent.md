@@ -66,3 +66,16 @@ if(number<9)
 In our CubeHandler component case, we are testing if the Key "D" was pressed by the user.
 
    [- see more for Unity Input System](https://docs.unity3d.com/ScriptReference/Input.html)
+   
+* #### step 5 - change cube material if key was pressed
+Similarly to how we stored the cube's existing material in a Material variable in Start(), we are now going to **set** this material instead. 
+```
+ void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            gameObject.GetComponent<MeshRenderer>().sharedMaterial = new_material;
+        }
+    }
+```
+
