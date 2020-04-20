@@ -6,8 +6,7 @@ This exercise will guide you through creating your first custom C# component. Th
 
 >
 
-#### step 1
-
+* #### step 1
 Create your C# component through Assets>Create>C# Script.
 
 #### step 2
