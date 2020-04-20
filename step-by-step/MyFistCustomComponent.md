@@ -99,7 +99,7 @@ This variable will be responsible for storing the current material our cobe game
     {
         if(Input.GetKeyDown(KeyCode.D))
         {
-            // get the current material the gameobject has
+            // get the material the gameobject has now
             current_material = gameObject.GetComponent<MeshRenderer>().sharedMaterial;
 
             // check if the current material is the new material
@@ -116,4 +116,4 @@ This variable will be responsible for storing the current material our cobe game
         }
     }
 ```
-
+We used an "if...else" statement this time. This means that we defined an action to be executed when our conditional is met and an action to be executed if our conditional is not met. If you save and play the game now you will be able to interchange between the two materials by hitting "D".
