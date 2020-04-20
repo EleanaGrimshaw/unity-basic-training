@@ -129,3 +129,8 @@ Unity provides a series of methods through which you can easily check if various
 ![Image](https://www.lucedigitale.com/blog/wp-content/uploads/2014/01/unity-raycasting.jpg)
 
 Another popular way of triggering things in Unity is to detect the interaction of the user with the scene's gameobjects. This is possible through [raycasting](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html). The way this works is by casting a ray from a certain position in space towards a certain direction and for a set distance and checking if this ray hit any collider objects. The raycast itself is a boolean which means it returns true or false depending on whether it found a collision, but it also allows access to other properties of the collison through the [Raycasthit](https://docs.unity3d.com/ScriptReference/RaycastHit.html) such as the hitting point, the distance form the origin etc.
+
+### - Scene Managers
+
+It is very common in Unity projects to create one or more Scene Managers. These are usually empty gameobjects that have custom components which hold and handle general scene information and are responsible for performing some global actions.
+[see more in excercise 4](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstManager.md).
