@@ -143,3 +143,25 @@ void Update()
     }
 }
 ```
+Similar to they way we detected if a key has been pressed, we check if the player has clicked the left mouse button. If this condition is true we move forward into creating a ray that begins from the mouse position and goes straight into the 3D space of our scene. 
+The next step is to actually test if this ray hit an object. 
+```
+// create Ray variable which will hold the ray from mouse position towards the scene on left-click
+Ray ray;
+// create RaycastHit variable that will hold the raycasting data from the collision with an object
+RaycastHit hit;
+
+void Update()
+{
+    // Raycasting to interact with generated cubes and point out the attractor point
+    if (Input.GetMouseButtonDown(0) == true)
+    {
+        //1. create ray from mouse position - transform screen position where our mouse is to a ray towards our scene
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(Physics.Raycast(ray,out hit, Mathf.Infinity) == true)
+        {
+            
+        }
+    }
+}
+```
