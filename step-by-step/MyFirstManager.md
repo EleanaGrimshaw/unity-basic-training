@@ -180,4 +180,4 @@ The Raycast method has many [overloads](https://www.geeksforgeeks.org/c-sharp-me
 
 The code above, will store the selected gameobject inside the attractor variable if the ray collides with a cube and will print in the console the name of the cube it collided with. Otherwise it will just print that the ray did not hit any objects.
 
-![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/ezgif.com-video-to-gif.gif)
+![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/raycasting.gif)
