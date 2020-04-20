@@ -11,7 +11,7 @@ Create an empty gameobject, place it at (0,0,0)and name it GameManager. Placing 
 
 * #### step 2 - create public variables 
 Our manager is going to need some user defined information that will set certain parameters of its functionality. These parameters refer to the number of generated cubes, the bounds in x, y and z dimension, as well as the cube prefab and the color range gradient. 
-```
+```csharp
 public class CubesManager : MonoBehaviour
 {
 
@@ -33,7 +33,7 @@ This variables will be set from the Inspector
 As seen in the previous example, it is useful and tidy to enclose pieces of code responsible for performing certain actions in methods. In this case, we will create a method that will be responsible to spawn a number of cubes in random locations within the given bounds. Let's call this method "GenerateRandomCubes".
 
 Because we will generate a number of cubes (=cube_count), we will need to write a **[for loop](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for)**. Essentially what a for loop does is to execute a block of code for a specific number of times. I order to define the number of times (or else iterations) we need to define and initialization value, a condition that needs to be met and an iterator. In our case, the for loop will be written as follows.
-```
+```csharp
 for(int i=0; i<cube_count; i++)
 {
 
@@ -54,7 +54,7 @@ After making sure that we create the desired loop, we need to actually write wha
 5. to place this new cube in the position (random x, random y, random z)
 
 First we create some variables outside of our for loop that will hold the current x, y, z values in every iteration of the for loop as well as a Vector3 variable for the position.
-```
+```csharp
 public void GenerateRandomCubes()
 {
     // create the variables that will hold the random x, y, and z numbers for each position
@@ -66,7 +66,7 @@ public void GenerateRandomCubes()
 ```
 
 We continue by writting the code inside our for loof as follows:
-```
+```csharp
 public void GenerateRandomCubes()
     {
         // create the variables that will hold the random x, y, and z numbers for each position
@@ -110,7 +110,7 @@ First we creat the random values for x, y and z and created a Vector3 which woul
 You can see in the Hierarchy view the difference between having the new cubes as children of the manager (left) or as standalone gameobjects (right).
 
 We can now call our GenerateRandomCubes() method on Sart() and hit play. 
-```
+```csharp
 void Start()
 {
     // call cube generating method
@@ -129,7 +129,7 @@ In our random cubes example, we want to be able to tell which cube the player se
 
 We will define this specific location on the screen to be the position that the mouse has when we click the mouse's left button. 
 
-```
+```csharp
 // create Ray variable which will hold the ray from mouse position towards the scene on left-click
 Ray ray;
 
@@ -145,7 +145,7 @@ void Update()
 ```
 Similar to they way we detected if a key has been pressed, we check if the player has clicked the left mouse button. If this condition is true we move forward into creating a ray that begins from the mouse position and goes straight into the 3D space of our scene. 
 The next step is to actually test if this ray hit an object. 
-```
+```csharp
 // create Ray variable which will hold the ray from mouse position towards the scene on left-click
 Ray ray;
 // create RaycastHit variable that will hold the raycasting data from the collision with an object
