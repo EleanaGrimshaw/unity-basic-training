@@ -141,7 +141,7 @@ Methods are bits of code that are responsible for performing some action. They c
  }
  ```
  
- Now we can replace all the code in our Update method that was responsible for the material handling with this method:
+ Now we can replace all the code in our Update method that was responsible for the material handling with our new method:
  ```
  void Update()
  {
