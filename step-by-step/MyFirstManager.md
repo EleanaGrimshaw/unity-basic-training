@@ -25,3 +25,4 @@ public class CubesManager : MonoBehaviour
     
 }
 ```
+This variables will be set from the Inspector
