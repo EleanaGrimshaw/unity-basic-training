@@ -48,7 +48,7 @@ We said that this component will change the gameobject's material with a hit of 
    
 This is our first "if" statement. Its job is to check if a condition is met and perform a corresponfing specific action. Its syntax and logic behind it is the following:
 ```
-if(my condition)
+if(my condition is met)
 {
     do something
 }
