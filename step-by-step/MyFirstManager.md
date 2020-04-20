@@ -44,3 +44,11 @@ Our for loop states that it creates an integer "i" with an initial value equal t
 ```
 i++ is equal to i = i + 1
 ```
+Consequently, our for loop will perform a number of iterations equal to the cube_count.
+
+After making sure that we create the desired loop, we need to actually write what we need to be executed in each iteration. We need:
+1. to generate a random x value between 0 and bounds_x
+2. to generate a random y value between 0 and bounds_y
+3. to generate a random z value between 0 and bounds_z
+4. to create a new cube gameobject
+5. to place this new cube in the position (random x, random y, random z)
