@@ -7,7 +7,14 @@ This exercise will guide you through creating your first custom C# component. Th
 >
 
 * #### step 1
-Create your C# component through Assets>Create>C# Script.
+Create your C# component through Assets>Create>C# Script. Right click your newly created component and hit Edit to open it in Visual Studio. 
 
-#### step 2
-
+* #### step 2
+Add two new public variables which hols the start material and the new material. Name those variables accordingly
+'''
+# code block
+public class CubeHandler : MonoBehaviour
+{
+    public Material start_material;
+    public Material new_material;
+'''
