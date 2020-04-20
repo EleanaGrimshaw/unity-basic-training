@@ -53,7 +53,7 @@ After making sure that we create the desired loop, we need to actually write wha
 4. to create a new cube gameobject
 5. to place this new cube in the position (random x, random y, random z)
 
-First we create some variables outside of our for loop that will hold the current x, y, z values in every iteration of the for loop as well as a variable for the position and a counter for the cube naming.
+First we create some variables outside of our for loop that will hold the current x, y, z values in every iteration of the for loop as well as a Vector3 variable for the position.
 ```
 public void GenerateRandomCubes()
 {
@@ -62,7 +62,6 @@ public void GenerateRandomCubes()
     float _y;
     float _z;
     Vector3 new_position;
-    int counter = 0;
 }
 ```
 
@@ -75,7 +74,6 @@ public void GenerateRandomCubes()
         float _y;
         float _z;
         Vector3 new_position;
-        int counter = 0;
 
         // for loop to iteratate cube number and create random x,y and z values for each new cube's position;
 
@@ -96,14 +94,13 @@ public void GenerateRandomCubes()
             //3. set the new cube scale to one
             new_cube.transform.localScale = Vector3.one;
 
-            //4. ste the new cube's name
+            //4. set the new cube's name
             new_cube.name = "cube_" + counter.ToString();
 
             //5. make the new cube a child object (parenting constraint) of the Manager Gameobject
             new_cube.transform.SetParent(transform);
 
-            //6. increase counter by 1
-            counter++;
         }
     }
 ```
+First we creat the random values for x, y and z and created a Vector3 which would be the position of the new cube. Then we create a new instance of our cube [prefab](https://docs.unity3d.com/Manual/Prefabs.html) using the [Instantiate](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html) method of the Object class. We set the Vector3 we created as the position of the new cube and we set its scale to a uniform (1,1,1). We name our new object using the value of our iterator i. Finally, we make the new cube gameobject a **child** of the current Transform which is the one attached to our manager gameObject.
