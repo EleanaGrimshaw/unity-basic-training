@@ -92,3 +92,23 @@ public class CubeHandler : MonoBehaviour
     Material current_material;
 }
 ```
+
+This variable will be responsible for storing the current material our cobe gameobject has. We adjust our previous code as follows
+```
+ void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            current_material = gameObject.GetComponent<MeshRenderer>().sharedMaterial;
+            if(current_material == new_material)
+            {
+                gameObject.GetComponent<MeshRenderer>().sharedMaterial = start_material;
+            }
+            else
+            {
+                gameObject.GetComponent<MeshRenderer>().sharedMaterial = new_material;
+            }
+        }
+    }
+```
+
