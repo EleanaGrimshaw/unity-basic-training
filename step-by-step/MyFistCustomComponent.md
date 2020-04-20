@@ -78,4 +78,4 @@ Similarly to how we stored the cube's existing material inside a Material variab
         }
     }
 ```
-   *Be sure to fill the new_material variable with your desired material in the Inspector window. If the new_material is empty you will     get an error
+   *Be sure to fill the new_material variable with your desired material in the Inspector window. If the new_material is empty you will     get an error*
