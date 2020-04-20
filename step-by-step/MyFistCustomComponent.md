@@ -16,4 +16,5 @@ public class CubeHandler : MonoBehaviour
 {
     public Material start_material;
     public Material new_material;
+}
 ```
