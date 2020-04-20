@@ -10,7 +10,7 @@ This exercise will guide you through creating your first custom C# component. Th
 Create your C# component through Assets>Create>C# Script. Right click your newly created component and hit Edit to open it in Visual Studio. 
 
 * #### step 2
-Add two new public variables which hols the start material and the new material. Name those variables accordingly
+Add two new public variables which will hold the start material and the new material. Name those variables accordingly
 ```
 public class CubeHandler : MonoBehaviour
 {
@@ -18,3 +18,7 @@ public class CubeHandler : MonoBehaviour
     public Material new_material;
 }
 ```
+
+* #### step 3
+The first thing you need to do, is read and store the material your gameobject already has when our app **starts**. For that reason we will write our first piece of code inside the Start() method which is executed **once** when the game begins. In order to access the material of our gameobject we need first to access that component that holds this material. This component is the **MeshRenderer**.
+! [Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/meshrenderer.JPG)
