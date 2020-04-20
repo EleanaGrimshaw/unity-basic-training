@@ -7,6 +7,6 @@ This exercise will guide you through creating your first game manager. The manag
 ---
 
 * #### step 1 - create the Game Manager
-Create an empty gameobject, place it at (0,0,0)and name it GameManager. Placing the manager gameobject at (0,0,0) is important for the parenting constraint as we will see in the following steps of this exercise. Create a custom C# script and name it "CubesManager". Attach the new script to the GameManager gameobject and open the script in Visual Studio for editing.
+Create an empty gameobject, place it at (0,0,0)and name it GameManager. Placing the manager gameobject at (0,0,0) is important for the parenting constraint as we will see in the following steps of this exercise. Create a custom C# script and name it "CubesManager". Attach the new component to your empty gameobject and open the script in Visual Studio for editing.
 
 * #### step 2 - 
