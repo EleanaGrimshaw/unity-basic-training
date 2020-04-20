@@ -46,9 +46,64 @@ i++ is equal to i = i + 1
 ```
 Consequently, our for loop will perform a number of iterations equal to the cube_count.
 
-After making sure that we create the desired loop, we need to actually write what we need to be executed in each iteration. We need:
+After making sure that we create the desired loop, we need to actually write what we need to be executed in **each iteration**. We need:
 1. to generate a random x value between 0 and bounds_x
 2. to generate a random y value between 0 and bounds_y
 3. to generate a random z value between 0 and bounds_z
 4. to create a new cube gameobject
 5. to place this new cube in the position (random x, random y, random z)
+
+First we create some variables outside of our for loop that will hold the current x, y, z values in every iteration of the for loop as well as a variable for the position and a counter for the cube naming.
+```
+public void GenerateRandomCubes()
+{
+    // create the variables that will hold the random x, y, and z numbers for each position
+    float _x;
+    float _y;
+    float _z;
+    Vector3 new_position;
+    int counter = 0;
+}
+```
+
+We continue by writting the code inside our for loof as follows:
+```
+public void GenerateRandomCubes()
+    {
+        // create the variables that will hold the random x, y, and z numbers for each position
+        float _x;
+        float _y;
+        float _z;
+        Vector3 new_position;
+        int counter = 0;
+
+        // for loop to iteratate cube number and create random x,y and z values for each new cube's position;
+
+        for(int i=0; i<cube_count; i++)
+        {
+            _x = Random.Range(0, bounds_x);
+            _y = Random.Range(0, bounds_y);
+            _z = Random.Range(0, bounds_z);
+
+            new_position = new Vector3(_x, _y, _z);
+
+            //1. Instantiate a new cube from the referenced prefab
+            GameObject new_cube = Instantiate(cube_prefab);
+
+            //2. place the new cube in the random position that was juast created
+            new_cube.transform.position = new_position;
+
+            //3. set the new cube scale to one
+            new_cube.transform.localScale = Vector3.one;
+
+            //4. ste the new cube's name
+            new_cube.name = "cube_" + counter.ToString();
+
+            //5. make the new cube a child object (parenting constraint) of the Manager Gameobject
+            new_cube.transform.SetParent(transform);
+
+            //6. increase counter by 1
+            counter++;
+        }
+    }
+```
