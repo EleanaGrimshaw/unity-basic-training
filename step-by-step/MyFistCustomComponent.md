@@ -99,13 +99,18 @@ This variable will be responsible for storing the current material our cobe game
     {
         if(Input.GetKeyDown(KeyCode.D))
         {
+            // get the current material the gameobject has
             current_material = gameObject.GetComponent<MeshRenderer>().sharedMaterial;
+
+            // check if the current material is the new material
             if(current_material == new_material)
             {
+                // if it is, we will change the material back to the start_material
                 gameObject.GetComponent<MeshRenderer>().sharedMaterial = start_material;
             }
             else
             {
+                // if it isn't, we will change the material to the new material
                 gameObject.GetComponent<MeshRenderer>().sharedMaterial = new_material;
             }
         }
