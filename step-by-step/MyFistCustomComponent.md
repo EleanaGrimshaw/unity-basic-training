@@ -45,3 +45,18 @@ We said that this component will change the gameobject's material with a hit of 
     }
 ```
    [- see more for Unity Input System](https://docs.unity3d.com/ScriptReference/Input.html)
+   
+This is our first "if" statement. Its job is to check if a condition is met and perform a corresponfing specific action. Its syntax and logic behind it is the following:
+```
+if(my condition)
+{
+    do something
+}
+```
+for example we could test
+```
+int number = 5;
+if(number<9)
+{
+    print("my number is smaller than nine");
+}
