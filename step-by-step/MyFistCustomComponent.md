@@ -150,3 +150,5 @@ Methods are bits of code that are responsible for performing some action. They c
         ChangeMaterial();
     }
  }
+```
+Methods are very useful for enclosing bits of code that can be reused in various ocasions in our code. This will be further explained in future exercises.
