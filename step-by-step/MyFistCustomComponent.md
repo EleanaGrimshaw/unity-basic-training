@@ -44,9 +44,8 @@ We said that this component will change the gameobject's material with a hit of 
         }
     }
 ```
-   [- see more for Unity Input System](https://docs.unity3d.com/ScriptReference/Input.html)
    
-This is our first "if" statement. Its job is to check if a condition is met and perform a corresponfing specific action. Its syntax and logic behind it is the following:
+This is our first "if" statement. Its job is to check if a condition is met and perform a corresponfing specified action. Its syntax and logic behind it is the following:
 ```
 if(my condition is met)
 {
@@ -60,3 +59,7 @@ if(number<9)
 {
     print("my number is smaller than nine");
 }
+```
+
+In our CubeHandler component case, we are testing if the Key "D" was pressed by the user.
+   [- see more for Unity Input System](https://docs.unity3d.com/ScriptReference/Input.html)
