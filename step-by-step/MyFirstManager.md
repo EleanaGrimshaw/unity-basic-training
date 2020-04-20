@@ -22,4 +22,6 @@ public class CubesManager : MonoBehaviour
     public float bounds_x;
     public float bounds_y;
     public float bounds_z;
+    
+}
 ```
