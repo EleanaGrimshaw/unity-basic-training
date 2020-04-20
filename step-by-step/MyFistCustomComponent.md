@@ -68,7 +68,7 @@ In our CubeHandler component case, we are testing if the Key "D" was pressed by 
    [- see more for Unity Input System](https://docs.unity3d.com/ScriptReference/Input.html)
    
 * #### step 5 - change cube material if key was pressed
-Similarly to how we stored the cube's existing material in a Material variable in Start(), we are now going to **set** this material instead. 
+Similarly to how we stored the cube's existing material inside a Material variable during Start(), we are now going to **set** the cube's material instead. We are going to set it to the new_material.
 ```
  void Update()
     {
@@ -78,4 +78,4 @@ Similarly to how we stored the cube's existing material in a Material variable i
         }
     }
 ```
-
+   *Be sure to fill the new_material variable with your desired material in the Inspector window. If the new_material is empty you will     get an error
