@@ -28,3 +28,6 @@ public class CubesManager : MonoBehaviour
 This variables will be set from the Inspector
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/public%20variables.JPG)
+
+* #### step 3 - Create a method to generate cubes
+As seen in our previous example, it is useful and tidy to enclose peices of code responsible for performing a certain action in methods. This time, we will create a method that will be responsible to spawn a number of cubes in random locations within the given bounds. Let's call this method "GenerateRandomCubes".
