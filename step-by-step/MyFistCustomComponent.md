@@ -24,10 +24,11 @@ The first thing you need to do, is read and store the material your gameobject a
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/meshrenderer.JPG)
 
-We can access the MeshRenderer of the current gameobject like that:
+We can get and store the material of the current gameobject like that:
 ```
 void Start()
     {
        start_material = gameObject.GetComponent<MeshRenderer>().sharedMaterial;
     }
 ```
+Notice how we use the word "gameObject" to access the MeshRenderer component. The "gameObject" worrd refers to the current gameObject instance that our CubeHandler script is attached on. 
