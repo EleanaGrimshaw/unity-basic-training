@@ -34,7 +34,7 @@ This repository provides a guide for the basics of Unity3D.
 * [the scene](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#the-scene)
 * [geometry in Unity](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#geometry-in-unity)
 * [physics](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#physics)
-* rendering
+* [rendering](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#rendering)
 
 **level 2 (exercises 3 & 4)**
 * [custom C# components](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#custom-c-components)
@@ -120,6 +120,8 @@ Two of the most significant components in unity physics are:
 *[proposed physics tutorials](https://learn.unity.com/search?k=%5B%22q%3APhysics%22%5D)*
 
 ## [rendering](https://docs.unity3d.com/Manual/Shaders.html)
+
+Rendering is the automated process that enables us to see things in our game. It is the process of transforming a 3D geometry into a 2D image that we are able to see on our screen. Many factors and processes are involved into rendering and it is important to understand the main [logics behind the process](https://all3dp.com/2/what-is-3d-rendering-simply-explained/). 
 
 > End of Level 1,  *Exercises 1 & 2*
 
