@@ -19,6 +19,7 @@ Unity 2019.3
 2. MeshFilter & MeshRenderer
 3. [My First Custom Component](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFistCustomComponent.md)
 4. [My First Game Manager](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstManager.md)
+5. My First UI 
 
 ## description
 This repository provides a guide for the basics of Unity3D.
@@ -43,7 +44,6 @@ This repository provides a guide for the basics of Unity3D.
 
 ---
 ---
-
 
 
 ## what is Unity?
@@ -112,6 +112,12 @@ When importing geometries from other software, depending on their format, Unity 
 ## [physics](https://docs.unity3d.com/Manual/PhysicsSection.html)
 
 Unity, as most game engines, has its own inherent physics engines. Essentially, what a physics engine is responsible for simulating the motions and reaction of objects as if they existed in an environment of real-world and were constraint by the actual laws of physics. In other words, such engines provide approximate simulations of certain physics systems as they would work in the real-world. These systems can vary from the basic rigid and soft bodies dynamics to more complex systems such as fluid dynamics.  
+
+Two of the most significant components in unity physics are:
+* [rigid body](https://docs.unity3d.com/Manual/RigidbodiesOverview.html)
+* [colliders](https://docs.unity3d.com/Manual/CollidersOverview.html)
+
+[proposed physics tutorials](https://learn.unity.com/search?k=%5B%22q%3APhysics%22%5D)
 
 > Exercises 1 & 2
 
