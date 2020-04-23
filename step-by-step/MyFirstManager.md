@@ -228,3 +228,51 @@ public void DistanceFromAttractor(GameObject _attractor, float max_distance)
     attractor_pos = _attractor.transform.position;
 }
 ```
+
+Then we will iterate through the children of the Manager gameobject that are our cubes, extract their position and calculate their distance from the attractor. In doing so we need to make that the current children is **not** the attractor.
+```csharp
+public void DistanceFromAttractor(GameObject _attractor, float max_distance)
+{
+    // --- method variables
+    GameObject current;
+    Vector3 current_pos;
+    Vector3 attractor_pos;
+    Color current_color;
+
+    float distance;
+    float color_t;
+    
+    // --- method code
+
+    //0. store attractor cube's position
+    attractor_pos = _attractor.transform.position;
+    
+    //1. iterate all cube childer objects to find their distance from the attractor
+    for(int i=0; i<cube_count; i++)
+    {
+        //2. get current gameobject from children
+        current = transform.GetChild(i).gameObject;
+
+        //3. make sure current cube is not the attractor
+        if(current != _attractor)
+        {
+            //4. get the current cube's position
+            current_pos = current.transform.position;
+            distance = Vector3.Distance(current_pos, attractor_pos);
+
+            //5. remap the distance value to go from 0 to 1 with the inverse.lerp function
+            color_t = Mathf.InverseLerp(0, max_distance, distance);
+
+            //6. evaluate the color range gradient based on distance t and extract cube's color
+            current_color = color_range.Evaluate(color_t);
+
+            //7. Call the PainByDistance Function of the cube and pass the calculated color
+            transform.GetChild(i).GetComponent<CubeHandler>().PaintByDistance(current_color);
+        }
+        else
+        {
+            transform.GetChild(i).GetComponent<CubeHandler>().PaintByDistance(Color.red);
+        }
+    }
+}
+```
