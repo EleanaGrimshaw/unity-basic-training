@@ -190,7 +190,15 @@ second is to change the color accordingly. We will do the first step inside out 
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/prefab2.JPG)
 
-We start by creating a new method in our CubesManager component that we will call "DistanceFromAttractor". This method will take two parameters:
+We start by adding a method in our CubeHandler component that we will name "PaintByDistance". This method will take one **Color** parameter and will be responsible to change the Gameobject's color. 
+```
+public void PaintByDistance(Color color)
+{
+    gameObject.GetComponent<MeshRenderer>().material.color = color;
+}
+```
+
+Then, going back to our CubesManager component, we create a new method that we will call "DistanceFromAttractor". This method will take two parameters:
 1. a GameObject parameter which will be the current attractor gameobject
 2. a float parameter which will be the maximum distance two cubes can have with each other. (we can calculate this, but for the moment we will just set it by approximation)
 
