@@ -109,6 +109,10 @@ The main graphics primitive that Unity uses in order to render geometry is the *
 
 When importing geometries from other software, depending on their format, Unity automatically creates an asset that holds the necessary information (mesh, materials, colors) and creates a gameobject that already has the corresponding mesh filter and mesh renderer components attached. You have the opportunity to change some of the geometry properties when importing it through the [import settings window](https://docs.unity3d.com/Manual/class-FBXImporter.html).
 
+## [physics](https://docs.unity3d.com/Manual/PhysicsSection.html)
+
+Unity, as most game engines, has its own inherent physics engines. Essentially, what a physics engine is responsible for simulating the motions and reaction of objects as if they existed in an environment of real-world and were constraint by the actual laws of physics. In other words, such engines provide approximate simulations of certain physics systems as they would work in the real-world. These systems can vary from the basic rigid and soft bodies dynamics to more complex systems such as fluid dynamics.  
+
 > Exercises 1 & 2
 
 ## custom C# components
