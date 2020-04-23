@@ -285,7 +285,37 @@ public void DistanceFromAttractor(GameObject _attractor, float max_distance)
 }
 ```
 
-After calculating the distance, we need to remap it to a range from 0 to 1 so that we can [evaluate](https://docs.unity3d.com/ScriptReference/Gradient.Evaluate.html) our color range gradient. We remap the distance using the [InverseLerp](https://docs.unity3d.com/ScriptReference/Mathf.InverseLerp.html) method of Unity's [Mathf](https://docs.unity3d.com/ScriptReference/Mathf.html) class. 
+After calculating the distance, we need to remap it to a range from 0 to 1 so that we can [evaluate](https://docs.unity3d.com/ScriptReference/Gradient.Evaluate.html) our color range gradient. We remap the distance using the [InverseLerp](https://docs.unity3d.com/ScriptReference/Mathf.InverseLerp.html) method of Unity's [Mathf](https://docs.unity3d.com/ScriptReference/Mathf.html) class. We need to define a numeric range for the InverseLerp method that will signify the smaller and larger distance. This is where we assign the maximum_distance float parameter.
 
 After we extract the distanced-based color from the gradient, we will use pass it to the **PaintByDistance()** method of the cube gameobject.
 
+Finally we will call the DistanceFromAttractor() method in the Update(), depending on whether we had a collision with a gamebjcet on mouse click. Make sure to define an appropriate maximum_distance so that the gradient works correctly.
+```csharp
+// create Ray variable which will hold the ray from mouse position towards the scene on left-click
+Ray ray;
+// create RaycastHit variable that will hold the raycasting data from the collision with an object
+RaycastHit hit;
+// create a GameObject variable that will hold the selected attractor cube
+GameObject attractor;
+
+void Update()
+{
+    // Raycasting to interact with generated cubes and point out the attractor point
+    if (Input.GetMouseButtonDown(0) == true)
+    {
+        //1. create ray from mouse position - transform screen position where our mouse is to a ray towards our scene
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(Physics.Raycast(ray,out hit, Mathf.Infinity) == true)
+        {
+            // find out which object was hit, this cube will be our attractor
+            attractor = hit.transform.gameObject;
+            print("hit "+ attractor.name);
+            DistanceFromAttractor(attractor, maximum);
+        }
+        else
+        {
+            print("no objects were hit");
+        }
+    }
+}
+```
