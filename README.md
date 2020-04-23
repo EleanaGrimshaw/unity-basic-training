@@ -126,6 +126,7 @@ Rendering is the automated process that enables us to see things in our game. It
 Other than meshes, which are the basic graphics primitives of Unity defining the shapes of objects, similarly important are:
 * [materials](https://docs.unity3d.com/Manual/Materials.html)
 * [shaders](https://www.shadercat.com/what-is-a-shader/)
+* [textures](https://docs.unity3d.com/Manual/Textures.html)
 
 
 > End of Level 1,  *Exercises 1 & 2*
