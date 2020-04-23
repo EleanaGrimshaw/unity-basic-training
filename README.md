@@ -119,6 +119,8 @@ Two of the most significant components in unity physics are:
 
 *[proposed physics tutorials](https://learn.unity.com/search?k=%5B%22q%3APhysics%22%5D)*
 
+## [rendering](https://docs.unity3d.com/Manual/Shaders.html)
+
 > End of Level 1,  *Exercises 1 & 2*
 
 ## custom C# components
