@@ -38,7 +38,7 @@ This repository provides a guide for the basics of Unity3D.
 **level 2 (exercises 3 & 4)**
 * [custom C# components](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#custom-c-components)
 
-**level 3 (exercise 5)
+**level 3 (exercise 5)**
 * Unity UI
 
 ---
