@@ -352,3 +352,38 @@ public void ReshufflePositions()
     }
 }
 ```
+The last thing left to do, is call our new method to be executed every time the player hits the Space button. 
+```csharp
+// create Ray variable which will hold the ray from mouse position towards the scene on left-click
+Ray ray;
+// create RaycastHit variable that will hold the raycasting data from the collision with an object
+RaycastHit hit;
+// create a GameObject variable that will hold the selected attractor cube
+GameObject attractor;
+
+void Update()
+{
+    // Raycasting to interact with generated cubes and point out the attractor point
+    if (Input.GetMouseButtonDown(0) == true)
+    {
+        //1. create ray from mouse position - transform screen position where our mouse is to a ray towards our scene
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(Physics.Raycast(ray,out hit, Mathf.Infinity) == true)
+        {
+            // find out which object was hit, this cube will be our attractor
+            attractor = hit.transform.gameObject;
+            print("hit "+ attractor.name);
+            DistanceFromAttractor(attractor, maximum);
+        }
+        else
+        {
+            print("no objects were hit");
+        }
+    }
+    
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+        ReshufflePositions();
+    }
+}
+```
