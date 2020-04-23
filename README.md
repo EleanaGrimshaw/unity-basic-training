@@ -117,9 +117,9 @@ Two of the most significant components in unity physics are:
 * [rigid body](https://docs.unity3d.com/Manual/RigidbodiesOverview.html)
 * [colliders](https://docs.unity3d.com/Manual/CollidersOverview.html)
 
-[proposed physics tutorials](https://learn.unity.com/search?k=%5B%22q%3APhysics%22%5D)
+*[proposed physics tutorials](https://learn.unity.com/search?k=%5B%22q%3APhysics%22%5D)*
 
-> Exercises 1 & 2
+> End of Level 1,  *Exercises 1 & 2*
 
 ## custom C# components
 
