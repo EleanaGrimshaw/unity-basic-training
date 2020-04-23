@@ -32,9 +32,14 @@ This repository provides a guide for the basics of Unity3D.
 * [basic elements](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#basic-elements)
 * [the scene](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#the-scene)
 * [geometry in Unity](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#geometry-in-unity)
+* physics
+* rendering
 
 **level 2 (exercises 3 & 4)**
 * [custom C# components](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/README.md#custom-c-components)
+
+**level 3 (exercise 5)
+* Unity UI
 
 ---
 ---
