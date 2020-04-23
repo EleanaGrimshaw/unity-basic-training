@@ -18,7 +18,7 @@ Unity 2019.3
 1. My First Scene
 2. MeshFilter & MeshRenderer
 3. [My First Custom Component](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFistCustomComponent.md)
-4. [My First Manager](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstManager.md)
+4. [My First Game Manager](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstManager.md)
 
 ## description
 This repository provides a guide for the basics of Unity3D.
