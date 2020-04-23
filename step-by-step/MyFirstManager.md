@@ -325,3 +325,30 @@ The final step of this exercise is to add a method that will be responsible for 
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/Reshuffling.gif)
 
+In order to achieve that we will create a new method inside the CubesManager script that will be called "ReshufflePositions". This method will be similar to the **GenerateRandomCubes()** we created earlier, but this time we will not instantiate any new gameobjects since our cubes already exist in the game. Instead we will create new random positions and assign them to the existing cubes. We will also call the **PaintByDistance()** method of the cube prefab to give all of the cubes a white neutral color.
+```csharp
+public void ReshufflePositions()
+{
+    // create the variables that will hold the random x, y, and z numbers for each position
+    float _x;
+    float _y;
+    float _z;
+    Vector3 new_position;
+
+    // for loop to iteratate cube number and create random x,y and z values for each new cube's position;
+    for (int i = 0; i < cube_count; i++)
+    {
+        _x = Random.Range(0, bounds_x);
+        _y = Random.Range(0, bounds_y);
+        _z = Random.Range(0, bounds_z);
+
+        new_position = new Vector3(_x, _y, _z);
+
+        // move cube to new posiion
+        transform.GetChild(i).position = new_position;
+
+        // make cube's color neutral white until a new attractor is selected
+        transform.GetChild(i).GetComponent<CubeHandler>().PaintByDistance(Color.white);
+    }
+}
+```
