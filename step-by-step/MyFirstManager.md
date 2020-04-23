@@ -191,7 +191,7 @@ second is to change the color accordingly. We will do the first step inside out 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/prefab2.JPG)
 
 We start by adding a method in our CubeHandler component that we will name "PaintByDistance". This method will take one **Color** parameter and will be responsible to change the Gameobject's color. 
-```
+```csharp
 public void PaintByDistance(Color color)
 {
     gameObject.GetComponent<MeshRenderer>().material.color = color;
@@ -285,7 +285,7 @@ public void DistanceFromAttractor(GameObject _attractor, float max_distance)
 }
 ```
 
-After calculating the distance, we need to remap it to a range from 0 to 1 so that we can [evaluate](https://docs.unity3d.com/ScriptReference/Gradient.Evaluate.html) our color range gradient. We remap the distance using the [InverseLerp](https://docs.unity3d.com/ScriptReference/Mathf.InverseLerp.html) method of Unity's [Mathf](https://docs.unity3d.com/ScriptReference/Mathf.html) class. *separate paragraph*
+After calculating the distance, we need to remap it to a range from 0 to 1 so that we can [evaluate](https://docs.unity3d.com/ScriptReference/Gradient.Evaluate.html) our color range gradient. We remap the distance using the [InverseLerp](https://docs.unity3d.com/ScriptReference/Mathf.InverseLerp.html) method of Unity's [Mathf](https://docs.unity3d.com/ScriptReference/Mathf.html) class. 
 
 After we extract the distanced-based color from the gradient, we will use pass it to the **PaintByDistance()** method of the cube gameobject.
 
