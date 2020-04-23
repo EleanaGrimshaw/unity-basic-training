@@ -198,6 +198,7 @@ We will then create some variables that will store the data that we need during 
 ```csharp
 public void DistanceFromAttractor(GameObject _attractor, float max_distance)
 {
+    // --- method variables
     GameObject current;
     Vector3 current_pos;
     Vector3 attractor_pos;
@@ -205,5 +206,25 @@ public void DistanceFromAttractor(GameObject _attractor, float max_distance)
 
     float distance;
     float color_t;
+}
+```
+
+Before we start iterating through the cube gameobjects, we need to store the current position of our selected attractor object in the corresponding Vector3 variable. 
+```csharp
+public void DistanceFromAttractor(GameObject _attractor, float max_distance)
+{
+    // --- method variables
+    GameObject current;
+    Vector3 current_pos;
+    Vector3 attractor_pos;
+    Color current_color;
+
+    float distance;
+    float color_t;
+    
+    // --- method code
+
+    //0. store attractor cube's position
+    attractor_pos = _attractor.transform.position;
 }
 ```
