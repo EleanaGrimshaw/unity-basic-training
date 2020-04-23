@@ -195,12 +195,15 @@ We start by creating a new method in our CubesManager component that we will cal
 2. a float parameter which will be the maximum distance two cubes can have with each other. (we can calculate this, but for the moment we will just set it by approximation)
 
 We will then create some variables that will store the data that we need during the iterations.
-```
-GameObject current;
-Vector3 current_pos;
-Vector3 attractor_pos;
-Color current_color;
+```csharp
+public void DistanceFromAttractor(GameObject _attractor, float max_distance)
+{
+    GameObject current;
+    Vector3 current_pos;
+    Vector3 attractor_pos;
+    Color current_color;
 
-float distance;
-float color_t;
+    float distance;
+    float color_t;
+}
 ```
