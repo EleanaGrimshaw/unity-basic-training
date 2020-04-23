@@ -8,10 +8,16 @@ This exercise will guide you through creating your first game manager. The manag
 
 ---
 
-* #### step 1 - create the Game Manager
+* #### step 1 - create prefab
+Create a cube prefab that has the CubeHandler() script attached. ([see exercise 3](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFistCustomComponent.md)).
+Create a folder in your Assets named "Prefabs" and drag the cube gameObject from exercise 3 in that folder. You will see that the gameobject will automatically turn blue on your Hierarchy.
+
+![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/Prefab.gif)
+
+* #### step 2 - create the Game Manager
 Create an empty gameobject, place it at (0,0,0)and name it GameManager. Placing the manager gameobject at (0,0,0) is important for the parenting constraint as we will see in the following steps of this exercise. Create a custom C# script and name it "CubesManager". Attach the new component to your empty gameobject and open the script in Visual Studio for editing.
 
-* #### step 2 - create public variables 
+* #### step 3 - create public variables 
 Our manager is going to need some user defined information that will set certain parameters of its functionality. These parameters refer to the number of generated cubes, the bounds in x, y and z dimension, as well as the cube prefab and the color range gradient. 
 ```csharp
 public class CubesManager : MonoBehaviour
@@ -31,7 +37,7 @@ This variables will be set from the Inspector
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/public%20variables.JPG)
 
-* #### step 3 - Create a method to generate cubes
+* #### step 4 - Create a method to generate cubes
 As seen in the previous example, it is useful and tidy to enclose pieces of code responsible for performing certain actions in methods. In this case, we will create a method that will be responsible to spawn a number of cubes in random locations within the given bounds. Let's call this method "GenerateRandomCubes".
 
 Because we will generate a number of cubes (=cube_count), we will need to write a **[for loop](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for)**. Essentially what a for loop does is to execute a block of code for a specific number of times. I order to define the number of times (or else iterations) we need to define and initialization value, a condition that needs to be met and an iterator. In our case, the for loop will be written as follows.
@@ -122,7 +128,7 @@ void Start()
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/random%20cubes.JPG)
 
-* #### step 4 - define attractor cube
+* #### step 5 - define attractor cube
 The next step is to enable the player to **select** the attractor among all these random cubes. We will achieve this through a process called raycasting. [Raycasting](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) is part of the built in physics engine that unity has and it enables us to cast a ray from a given point in space, towards a given direction and check if this ray collided with any objects in the scene. 
 
 In our random cubes example, we want to be able to tell which cube the player selected with his/her mouse. In order to be able to do that we will implement a very useful method available in the Camera class called [ScreenPointToRay](https://docs.unity3d.com/ScriptReference/Camera.ScreenPointToRay.html). This method creates a ray that starts from the camera and goes towards the 3D scene through a specific location in the screen. 
@@ -184,7 +190,7 @@ The code above, will store the selected gameobject inside the attractor variable
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/raycasting.gif)
 
-* #### step 5 - color cubes based on vicinity to attractor
+* #### step 6 - color cubes based on vicinity to attractor
 This step requires two sub-steps, the first is to calculate the distance that each of the cubes has from the current attractor and the 
 second is to change the color accordingly. We will do the first step inside out CubesManager script and we will do the second step inside our CubeHandler script that the cube prefab already has attached. 
 
@@ -320,7 +326,7 @@ void Update()
 }
 ```
 
-* #### step 6 - reshuffle cube objects 
+* #### step 7 - reshuffle cube objects 
 The final step of this exercise is to add a method that will be responsible for reshuffling the cubes within the given bounds and assign new positions. When reshuffling the cubes, we will color them back to a neutral color since their distance from the attractor will be altered. 
 
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/Reshuffling.gif)
