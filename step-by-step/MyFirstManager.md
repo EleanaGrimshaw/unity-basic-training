@@ -289,7 +289,7 @@ After calculating the distance, we need to remap it to a range from 0 to 1 so th
 
 After we extract the distanced-based color from the gradient, we will use pass it to the **PaintByDistance()** method of the cube gameobject.
 
-Finally we will call the DistanceFromAttractor() method in the Update(), depending on whether we had a collision with a gamebjcet on mouse click. Make sure to define an appropriate maximum_distance so that the gradient works correctly.
+Finally we will call the **DistanceFromAttractor()** method in the Update(), depending on whether we had a collision with a gamebjcet on mouse click. Make sure to define an appropriate maximum_distance so that the gradient works correctly.
 ```csharp
 // create Ray variable which will hold the ray from mouse position towards the scene on left-click
 Ray ray;
@@ -319,3 +319,9 @@ void Update()
     }
 }
 ```
+
+* #### step 6 - reshuffle cube objects 
+The final step of this exercise is to add a method that will be responsible for reshuffling the cubes within the given bounds and assign new positions. When reshuffling the cubes, we will color them back to a neutral color since their distance from the attractor will be altered. 
+
+![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/Reshuffling.gif)
+
