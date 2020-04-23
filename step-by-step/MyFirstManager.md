@@ -229,7 +229,7 @@ public void DistanceFromAttractor(GameObject _attractor, float max_distance)
 }
 ```
 
-Then we will iterate through the children of the Manager gameobject that are our cubes, extract their position and calculate their distance from the attractor. In doing so we need to make that the current children is **not** the attractor.
+Then we will iterate through the children of the Manager gameobject that are our cubes, extract their position and calculate their distance from the attractor. In doing so we need to make sure that the current child is **not** the attractor.
 ```csharp
 public void DistanceFromAttractor(GameObject _attractor, float max_distance)
 {
@@ -276,3 +276,8 @@ public void DistanceFromAttractor(GameObject _attractor, float max_distance)
     }
 }
 ```
+
+After calculating the distance, we need to remap it to a range from 0 to 1 so that we can [evaluate](https://docs.unity3d.com/ScriptReference/Gradient.Evaluate.html) our color range gradient. We remap the distance using the [InverseLerp](https://docs.unity3d.com/ScriptReference/Mathf.InverseLerp.html) method of Unity's [Mathf](https://docs.unity3d.com/ScriptReference/Mathf.html) class. *separate paragraph*
+
+After we extract the distanced-based color from the gradient, we will use pass it to the **PaintByDistance()** method of the cube gameobject.
+
