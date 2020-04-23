@@ -121,7 +121,11 @@ Two of the most significant components in unity physics are:
 
 ## [rendering](https://docs.unity3d.com/Manual/Shaders.html)
 
-Rendering is the automated process that enables us to see things in our game. It is the process of transforming a 3D geometry into a 2D image that we are able to see on our screen. Many factors and processes are involved into rendering and there are more than one rendering techniques. It is important to understand the main [logics behind the process](https://all3dp.com/2/what-is-3d-rendering-simply-explained/). Because Unity, as all game engines, implements real-time rendering, it uses **rasterization** as it is one of the fastest and lighter rendering techniques.
+Rendering is the automated process that enables us to see things in our game. It is the process of transforming a 3D geometry into a 2D image that we are able to see on our screen. Many factors and processes are involved into rendering and there are more than one rendering techniques. It is important to understand the main [logics behind the process](https://all3dp.com/2/what-is-3d-rendering-simply-explained/). Because Unity, as most game engines, implements real-time rendering, it uses **rasterization** as it is one of the fastest and lighter rendering techniques.
+
+Other than meshes, which are the basic graphics primitives of Unity defining the shapes of objects, similarly important are:
+* [materials](https://docs.unity3d.com/Manual/Materials.html)
+* [shaders](https://www.shadercat.com/what-is-a-shader/)
 
 
 > End of Level 1,  *Exercises 1 & 2*
