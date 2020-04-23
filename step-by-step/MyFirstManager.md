@@ -247,7 +247,7 @@ public void DistanceFromAttractor(GameObject _attractor, float max_distance)
     //0. store attractor cube's position
     attractor_pos = _attractor.transform.position;
     
-    //1. iterate all cube childer objects to find their distance from the attractor
+    //1. iterate all cube children objects to find their distance from the attractor
     for(int i=0; i<cube_count; i++)
     {
         //2. get current gameobject from children
