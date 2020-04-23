@@ -140,6 +140,9 @@ Other than meshes, which are the basic graphics primitives of Unity defining the
 * [Loops](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for)
 * [Conditionals](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/if-else)
 
+### - [unity scripts](https://docs.unity3d.com/Manual/CreatingAndUsingScripts.html)
+Appart from using unity's built-in components, you have the ability to create your own custom components through C# scripts. After you have created and edited your script to fit your needs, just like other Components often have properties that are editable in the inspector, you can allow [values in your script](https://docs.unity3d.com/Manual/VariablesAndTheInspector.html) to be edited from the Inspector too. ([see exercise 3](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFistCustomComponent.md)).
+
 ![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/class2.jpg)
 
 ### - [Monobehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)
