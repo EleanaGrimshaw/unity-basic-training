@@ -22,7 +22,7 @@ Unity 2019.3
 5. My First UI 
 
 ## description
-This repository provides a guide for the basics of Unity3D.
+This repository provides a guide for the basics of Unity3D and various links to online resources for self-learning.
 
 ## contents
 **introduction**
