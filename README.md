@@ -128,6 +128,7 @@ Other than meshes, which are the basic graphics primitives of Unity defining the
 * [shaders](https://www.shadercat.com/what-is-a-shader/)
 * [textures](https://docs.unity3d.com/Manual/Textures.html)
 
+Please check the following [unity rendering tutorial](https://learn.unity.com/tutorial/introduction-to-lighting-and-rendering#5c7f8528edbc2a002053b532).
 
 > End of Level 1,  *Exercises 1 & 2*
 
