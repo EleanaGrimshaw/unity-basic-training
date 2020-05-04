@@ -38,3 +38,8 @@ We can add any new component to a selected gameobject by clicking the "Add Compo
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/rigid.JPG?raw=true)
 
+The next component that we need is a **Collider**. Collider components define the shape of a GameObject for the purposes of physical collisions. A collider, which is invisible, does not need to be the exact same shape as the GameObject’s mesh. The simplest colliders are primitive collider types. In 3D, these are the Box Collider, Sphere Collider and Capsule Collider. Since we created a Sphere primitive gameobjects, it has by default a **Sphere Collider** component attached so we won't need to add a collider manually.
+
+Apart from the primitive colliders, we also have the **Mesh Collider**. Upon importing geometry, if we enable the **Generate Colliders** option (as we did in the previous step), we make sure that the geometry will come with colliders that reflect the mesh geometry. You can see a gameobject's collider by turning off its Mesh Renderer component. 
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/colliders.JPG?raw=true)
