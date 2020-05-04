@@ -66,4 +66,4 @@ Before jumping into rendering, lights and materials, we should change the projec
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/colorSpace.JPG?raw=true)
 
 * #### step 8 - create custom skybox
-In this step, we will learn how to create a custom skybox from an HDRI image and use it to replace Unity's default skybox. 
+In this step, we will learn how to create a custom skybox from an HDRI image and use it to replace Unity's default skybox. First we create a folder in our Assets called "Textures" which will store all the textures of our project. 
