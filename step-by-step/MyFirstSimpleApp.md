@@ -47,6 +47,8 @@ Apart from the primitive colliders, we also have the **Mesh Collider**. Upon imp
 * #### step 5 - add physics material
 In order to be able to enhance the reaction of a gameobject to collisions we can also add a **[Physics Material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html)**. The physics materials are responsible for adjusting the friction and bouncing effects of colliding objects. 
 
-We will create a new folder inside our Assets, in the project window named "Materials" where we will store all the materials of this project. Inside this folder we will create a new physics material either by right clicking on aan empty space inside the project window and do Create>Physic Material, or through the Menu Bar Asset>Create>Physic Material. Because we want our sphere to be quite bouncy we will adjust the new material as follows.
+We will create a new folder inside our Assets, in the project window named "Materials", where we will store all the materials of this project. Inside this folder we will create a new physics material, either by right clicking on aan empty space inside the project window and do Create>Physic Material, or through the Menu Bar Asset>Create>Physic Material. Because we want our sphere to be quite bouncy we will adjust the new material as follows.
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/physicmat.JPG?raw=true)
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/Bounce-ball.gif?raw=true)
