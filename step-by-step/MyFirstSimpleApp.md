@@ -55,7 +55,15 @@ After creating the material we will add it to the **Material** property of the *
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/Bounce-ball.gif?raw=true)
 
-* #### step 6 - create prefab
+* #### step 6 - create prefab & generate instances
 Now that we have configured our sphere gameobject to have all the desired behaviours we can "save" it as a template and reuse it to create multiple instances. In other words we will turn our shpere gameobject into a [prefab](https://docs.unity3d.com/Manual/Prefabs.html). Create a folder in your Assets named "Prefabs" and drag the sphere gameObject from the Hierarchy window in that folder. You will see that the gameobject will automatically turn blue on your Hierarchy. Now let's add twelve instances of the prefab to our Scene by draging the prefab from the Assets back to the Hierarchy. 
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/Add-prefabs.gif?raw=true)
+
+* #### step 7 - adjust color space (optional)
+Before jumping into rendering, lights and materials, we should change the project's colorspace from Gamma to Linear. Working in linear color space gives more accurate rendering than working in gamma color space. This option lies in the projects settings which you can access from Menu Bar>Edit>Project Settings. In the window that pops up you should go to the **Player** settings look for the tab tha says **Other Settings**. If for some reason the Linear option is greayed out in the **Color Space** dropdown you can bypass this step.
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/colorSpace.JPG?raw=true)
+
+* #### step 8 - create custom skybox
+In this step, we will learn how to create a custom skybox from an HDRI image and use it to replace Unity's default skybox. 
