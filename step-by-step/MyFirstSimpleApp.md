@@ -28,6 +28,13 @@ You will see in the Hierarchy tab that the gameobject with the imported model ha
 The next step is to create a new gameobject in our Hierarchy using one of unity's primitive gameobjects, the sphere. We can create it either by right-clicking in an empty space on our hierarchy window and do 3D Object>Sphere or through the Menu Bar GameObject>3D Object>Sphere. Make sure that you place your sphere gameobject somewhere above the imported geometry.
 
 * #### step 4 - adding the physics components
-We want to add a **beahviour** in our sphere gameobject that will be responsible for making it responsive to gravity. In this way when we play our game, the sphere will **drop** and **collide** with the imported gameobject that lies below it. 
+We want to add a **behaviour** in our sphere gameobject that will be responsible for making it responsive to gravity. In this way when we play our game, the sphere will **drop** and **collide** with the imported gameobject that lies below it. 
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/rollingSphere.gif?raw=true)
+
+In order to achive this behaviour we will need two components the **Rigidbody** and the **Collider**. Thi first is responsible for enabling physical behaviour for a GameObject, meaning that with a Rigidbody attached, the object will immediately respond to gravity.
+
+We can add any new component to a selected gameobject by clicking the "Add Component" button at the bottom of the Inspector window and typing its name. For this exercise we will search and add the **Rigidbody** component. As you can see this component has some properties that will define the physical behaviour of the gameobject, such as it's mass and if it will react to gravity. We don't need to change any of the default values for our example.
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/rigid.JPG?raw=true)
+
