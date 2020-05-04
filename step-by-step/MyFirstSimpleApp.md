@@ -40,6 +40,13 @@ We can add any new component to a selected gameobject by clicking the "Add Compo
 
 The next component that we need is a **Collider**. Collider components define the shape of a GameObject for the purposes of physical collisions. A collider, which is invisible, does not need to be the exact same shape as the GameObject’s mesh. The simplest colliders are primitive collider types. In 3D, these are the Box Collider, Sphere Collider and Capsule Collider. Since we created a Sphere primitive gameobjects, it has by default a **Sphere Collider** component attached so we won't need to add a collider manually.
 
-Apart from the primitive colliders, we also have the **Mesh Collider**. Upon importing geometry, if we enable the **Generate Colliders** option (as we did in the previous step), we make sure that the geometry will come with colliders that reflect the mesh geometry. You can see a gameobject's collider by turning off its Mesh Renderer component. 
+Apart from the primitive colliders, we also have the **Mesh Collider**. Upon importing geometry, if we enable the **Generate Colliders** option (as we did in the previous step), we make sure that the geometry will come with colliders that reflect the mesh geometry. You can see a gameobject's collider, as alight green wireframe, by turning off its Mesh Renderer component. 
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/colliders.JPG?raw=true)
+
+* #### step 5 - add physics material
+In order to be able to enhance the reaction of a gameobject to collisions we can also add a **[Physics Material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html)**. The physics materials are responsible for adjusting the friction and bouncing effects of colliding objects. 
+
+We will create a new folder inside our Assets, in the project window named "Materials" where we will store all the materials of this project. Inside this folder we will create a new physics material either by right clicking on aan empty space inside the project window and do Create>Physic Material, or through the Menu Bar Asset>Create>Physic Material. Because we want our sphere to be quite bouncy we will adjust the new material as follows.
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/physicmat.JPG?raw=true)
