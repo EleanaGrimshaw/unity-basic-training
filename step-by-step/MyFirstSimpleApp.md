@@ -51,4 +51,6 @@ We will create a new folder inside our Assets, in the project window named "Mate
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/physicmat.JPG?raw=true)
 
+After creating the material we will add it to the **Material** property of the **Sphere Collider** component. We do this by dragging the material to the empty field next to the Material property.
+
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/Bounce-ball.gif?raw=true)
