@@ -18,3 +18,11 @@ As soon as you import the geometry file, you will see that Unity automatically c
 The most important setting when importing external geometries it to make sure that the scale is correct. Unity's default unit system is in **meters** and it provides you with two options in order to adjust your model to the correct scale. You can either let unity automatically convert your file's units to the meter equivalent with the **Convert Units** option or manually perform a uniform scale on your model though the **Scale Factor** option.
 
 Similarly important is to define whether your imported geometries will have colliders or not. As we will explain further down, **colliders** are very important components when it comes to using Unity's physics engine. We will enable the option **Generate Colliders** as we will be using physics for this exercise. 
+
+When we clarify the desired import settings we click **Apply** on the bottom right of the import settings tab. We can then use our model either by dragging it into the hierarchy tab or straight into the scene. We can adjust the transform component and configured the desired position, rotation and scale.
+
+* #### step 2 - parenting constraints
+You will see in the Hierarchy tab that the gameobject with the imported model has some sort of nesting. This means that a **parent** gameobject contains all of the geometries contained in our imported file as **children** gameobjects. Parenting is a very important concept in Unity and the most common way to group gameobjects and create some global transform constraints. Essentially the children gameobjects are bound to the transform of the parent.This means that the transform components of the children gameobjects, now contain **local** values that refer to the parent gameobject and not the world system. 
+
+* #### step 3 - adding physics components
+
