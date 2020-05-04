@@ -24,5 +24,10 @@ When we clarify the desired import settings we click **Apply** on the bottom rig
 * #### step 2 - parenting constraints
 You will see in the Hierarchy tab that the gameobject with the imported model has some sort of nesting. This means that a **parent** gameobject contains all of the geometries contained in our imported file as **children** gameobjects. Parenting is a very important concept in Unity and the most common way to group gameobjects and create some global transform constraints. Essentially the children gameobjects are bound to the transform of the parent.This means that the transform components of the children gameobjects, now contain **local** values that refer to the parent gameobject and not the world system. 
 
-* #### step 3 - adding physics components
+* #### step 3 - creating a new gameObject
+The next step is to create a new gameobject in our Hierarchy using one of unity's primitive gameobjects, the sphere. We can create it either by right-clicking in an empty space on our hierarchy window and do 3D Object>Sphere or through the Menu Bar GameObject>3D Object>Sphere. Make sure that you place your sphere gameobject somewhere above the imported geometry.
 
+* #### step 4 - adding the physics components
+We want to add a **beahviour** in our sphere gameobject that will be responsible for making it responsive to gravity. In this way when we play our game, the sphere will **drop** and **collide** with the imported gameobject that lies below it. 
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/rollingSphere.gif?raw=true)
