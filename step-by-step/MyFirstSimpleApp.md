@@ -14,3 +14,7 @@ Create a new folder in your Assets named "3D models". This is where we will save
 As soon as you import the geometry file, you will see that Unity automatically creates a prefab asset that holds all the relevant information for it. If you click on the asset you will see in your inspector the model [import settings](https://docs.unity3d.com/Manual/FBXImporter-Model.html).
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/importingnew.JPG?raw=true)
+
+The most important setting when importing external geometries it to make sure that the scale is correct. Unity's default unit system is in **meters** and it provides you with two options in order to adjust your model to the correct scale. You can either let unity automatically convert your file's units to the meter equivalent with the **Convert Units** option or manually perform a uniform scale on your model though the **Scale Factor** option.
+
+Similarly important is to define whether your imported geometries will have colliders or not. As we will explain further down, **colliders** are very important components when it comes to using Unity's physics engine. We will enable the option **Generate Colliders** as we will be using physics for this exercise. 
