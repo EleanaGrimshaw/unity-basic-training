@@ -54,3 +54,8 @@ We will create a new folder inside our Assets, in the project window named "Mate
 After creating the material we will add it to the **Material** property of the **Sphere Collider** component. We do this by dragging the material to the empty field next to the Material property.
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/Bounce-ball.gif?raw=true)
+
+* #### step 6 - create prefab
+Now that we have configured our sphere gameobject to have all the desired behaviours we can "save" it as a template and reuse it to create multiple instances. In other words we will turn our shpere gameobject into a [prefab](https://docs.unity3d.com/Manual/Prefabs.html). Create a folder in your Assets named "Prefabs" and drag the sphere gameObject from the Hierarchy window in that folder. You will see that the gameobject will automatically turn blue on your Hierarchy. Now let's add twelve instances of the prefab to our Scene by draging the prefab from the Assets back to the Hierarchy. 
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/Add-prefabs.gif?raw=true)
