@@ -13,4 +13,4 @@ Create a new folder in your Assets named "3D models". This is where we will save
 
 As soon as you import the geometry file, you will see that Unity automatically creates a prefab asset that holds all the relevant information for it. If you click on the asset you will see in your inspector the model [import settings](https://docs.unity3d.com/Manual/FBXImporter-Model.html).
 
-![Image](https://raw.githubusercontent.com/EleanaGrimshaw/unity-basic-training/master/Image%20Links/importing.JPG)
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/importingnew.JPG?raw=true)
