@@ -31,7 +31,7 @@ You can see that the Button gameobject itself has another gameobject as its chil
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/button%20editing.jpg?raw=true)
 
 * #### step 3 - create a method to calculate ordered positions
-Now that our UI elements are aesthetically configured, we are ready to jump back into some code to add the functionality of ordering our cubes. We will reopen the CubesManager script and create a new method that will be called "FindOrderedPostions". This method will not be *void* as all our other methods were so far but insteadt it will *return* a list of Vector3 which will contain the ordered positions.
+Now that our UI elements are aesthetically configured, we are ready to jump back into some code in order to add the functionality of ordering our cubes. We will reopen the CubesManager script and create a new method that will be called "FindOrderedPostions". This method will not be *void* as all our other methods were so far but insteadt it will *return* a list of Vector3 which will contain the ordered positions.
 ```csharp
 public List<Vector3> FindOrderedPostions()
 {
@@ -41,5 +41,12 @@ public List<Vector3> FindOrderedPostions()
 public void FindOrderedPostions()
 {
     // this method does not return anything
+}
+```
+This method will also require a *float* parameter named "spacing", which will define the distance between the grid-ordered positions we will create.
+```csharp
+public List<Vector3> FindOrderedPostions(float spacing)
+{
+    // this method returns a list of Vector3
 }
 ```
