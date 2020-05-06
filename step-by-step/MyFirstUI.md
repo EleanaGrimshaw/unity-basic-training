@@ -17,5 +17,9 @@ The Canvas appears on the Scene view as a a rectangle, making it easier to posit
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/screen%20space.JPG?raw=true)
 
+* #### step 2 - create UI Button elements
+The next step is to create and place the actual UI elements which in our case will be two buttons. We want to make sure that they are **children** of the canvas gameobject as mentioned earlier. For that reason we create them by having the canvas gameobject selected, right-click and do UI>Button or from the Menu bar Gameobject>UI>Button. After creating our buttons we will go ahead and place them on the up left side of the canvas, making sure that we create an appealing spacing. In order to do that we will change their **pivot** and **position** from the **Anchor Presets** menu. By holding down the **shift** and **alt** keys we make sure that we affect both pivot and position when we select the option to dock the button on the top left of the canvas.
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/Anchors-UI.gif?raw=true)
 
 
