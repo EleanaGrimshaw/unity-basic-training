@@ -8,4 +8,14 @@ In this exercise we will have a look into unity’s UI elements and how we can c
 
 ---
 
-* #### step 1
+* #### step 1 - create the Canvas
+The first item that is needed when we want to create a user interface is the **Canvas**. The [Canvas](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/UICanvas.html) is the area that all UI elements should be inside. It is a gameobject with a Canvas component on it, and all UI elements must be children of such a Canvas. We can create a new Canvas by right-clicking in the Hierarchy window and do UI>Canvas, or we can go to the Menu bar and do GameObject>Create>Canvas. 
+
+You will notice that apart from the Canvas gameobject that we created, another gamobject appeared in the Hierarchy window as well named **EventSystem**. The [Event System](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/EventSystem.html) is a gameobject that consists of a few components responsible for sending events. In other words the Event System provides way of sending events to objects in the application based on input, be it keyboard, mouse, touch, or custom input. If you wish to create a User interface in your application you need an Event System, otherwise the UI elements won't work. 
+
+The Canvas appears on the Scene view as a a rectangle, making it easier to position UI elements without having to jump to the Game View. There are three different distinct ways of **rendering** a Canvas object as seen in the [documentation](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/UICanvas.html). For the purposes of this exercise we will use the **Screen Space-Overlay**  mode which places UI elements on the screen rendered on top of the scene. 
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/screen%20space.JPG?raw=true)
+
+
+
