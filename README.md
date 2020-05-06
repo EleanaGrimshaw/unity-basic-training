@@ -19,7 +19,7 @@ Unity 2019.3
 2. [My First Simple App](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstSimpleApp.md)
 3. [My First Custom Component](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFistCustomComponent.md)
 4. [My First Game Manager](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstManager.md)
-5. My First UI 
+5. [My First UI](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstUI.md) 
 
 ## description
 This repository provides a guide for the basics of Unity3D and various links to online resources for self-learning.
