@@ -173,7 +173,42 @@ public class CubesManager : MonoBehaviour
 }
 ```
 * #### step 5 - connecting methods to UI elements
-Connecting the UI elements with functionality is quire easy. We see in the inspector that when our UI button is selected there is a field in the **Button** component that says **"On Click()"** followed by the phrase "List is empty". We want to add the methods that we want to be executed in that list. Let's start with the method that randomizes the cubes' positions that is now activated with the "Space" key. we click on the "+" button on the bottom right of the On **Click()** field. Then an item appears in the List which requires a gameobject and a function, Essentially it asks for a method and we need to define which gameobject has the component that contains this method. So we go ahead and drag the Manager gamobject in the gameobject field. As soon as we do that we click the "NoFunction" dropdown which will now have become available and we select the component that holds our method and finally the method itself.
+Connecting the UI elements with functionality is quire easy. We see in the inspector that when our UI button is selected there is a field in the **Button** component that says **"On Click()"** followed by the phrase "List is empty". We want to add the methods that we want to be executed in that list. Let's start with the method that randomizes the cubes' positions that is now activated with the "Space" key. 
+
+We click on the "+" button on the bottom right of the On **Click()** field. An item appears in the List which requires a gameobject and a function. Essentially it asks for a method and we also need to define which gameobject has the component that contains this method. So we go ahead and drag the Manager gameobject in the gameobject field. As soon as we do that we click the "NoFunction" dropdown, which will now have become available, and we select the component that holds our method and finally the method itself.
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/add-method.gif?raw=true)
+
+You can now hit play and see that the cubes are also randomized when we click on the "randomize cubes" button.
+
+In order to also add the functionality for ordering the cubes we need to go a step further. Since we are using the "MoveTowards" method as mentioned earlier, and since this method needs to be called inside the Update() all we need from our button is to activate a switch. So we create a **bool** public variable and we name it "start_moving". We then create a simple method that will be responsible for turning our bool to **true**. Let's name this method "EnableMover".
+```csharp
+public void EnableMover()
+{
+    start_moving = true;
+}
+```
+We then go to the Update() method and add a conditional that is responsible for calling the "MoveToPlace" method **ONLY** if the start_moving boll is true. We make sure to pass the required arguments inside our method as shown below.
+
+```csharp
+public void Update()
+{
+    .....
+    if (start_moving)
+    {
+        MoveToPlace(cube_count, moving_speed,grid_spacing, grid_size);
+    }  
+}
+```
+The last thing we need to ensure is that the start_moving bool will be turned back to false at some point. It makes sense to turn its value back to false when we randomize the cubes' positions so we will add it to the "ReshufflePositions" method.
+```csharp
+public void ReshufflePositions()
+{
+    start_moving = false;
+    ......
+    ......
+}
+```
+
+Finally you need to add the "EnableMover" method to the second button's "On Click()" list as we did before. You are now good to go. Feel free to hit play and interact with your buttons.
 
