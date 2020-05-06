@@ -74,7 +74,7 @@ public List<Vector3> FindOrderedPostions(float spacing, int size)
     return positions;
 }
 ```
-The for loop that we just wrote starts the iteration on the y dimension, then goes into the z dimension and finally into the x dimension. This means that the x dimension will be filled first, followed by the z and then followed byt the y. In other words, assuming the size is 3, our points will be created with the order they have in the following diagram:
+The for loop that we just wrote starts the iteration on the y dimension, then goes into the z dimension and finally into the x dimension. This means that the x dimension will be filled first, followed by the z and then followed byt the y. In other words, assuming the size is 3 (3x3x3 cells), our points will be created with the order they have in the following diagram:
 ```
 filling z dimension for (y=0)
     filling x dimension for(y=0,z=0)
@@ -118,3 +118,34 @@ filling z dimension for (y=1)
 ```
 
 * #### step 4 - create a method that will move the cubes to the ordered positions
+We now need to write the method that will be responsible for grabbing our cubes from their current positions and moving them to the desired ordered positions. Let's create a new method and name it "MoveToPlace". Our method will not return anything but it will have three *float* parameters: count, speed and spacing and one *int* parameter: size.
+```csharp
+public void MoveToPlace(int count, float speed, float spacing, int size)
+{
+    // we will write our functionality here
+}
+```
+Knowing that we will go to each cube and change its positionm, it is clear that we will need to write another for loop which will iterate through the cubes. The "count" float parameter we added to our method is responsible for passing the number of cubes. The "speed" float will define how quickly the cubes will move from their old(random) to their new(odered) position. Finally the "spacing" and "size" parameters will define the spacing between the ordered positions and the size of their respective 3D grid, as we will **call** the "FindOrderedPositions" method we just wrote which requires such a parameter. 
+```csharp
+public void MoveToPlace(int count, float speed, float spacing, int size)
+{
+    //create the list of ordered positions from the FindOrderedPosition method
+    List<Vector3> new_positions = FindOrderedPostions(spacing,size);
+    //public variables that will the current data for each iteration
+    GameObject current_cube;
+    Vector3 current_pos;
+    Vector3 mover;
+
+    for (int i = 0; i < count; i++)
+    {
+        //get the current child cube gameobject
+        current_cube = transform.GetChild(i).gameObject;
+        //store its position 
+        current_pos = current_cube.transform.position;
+        //calculate the cube's movement
+        mover = Vector3.MoveTowards(current_pos, new_positions[i], speed);
+        //assign new position to cube
+        current_cube.transform.position = mover;
+    }
+}
+```
