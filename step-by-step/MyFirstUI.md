@@ -58,11 +58,12 @@ public List<Vector3> FindOrderedPostions(float spacing, int size)
     List<Vector3> positions = new List<Vector3>();
     //create a Vector3 variable that will store the current position
     Vector3 position;
-    for(int y=0; y <size; y++)
+      
+    for(int y=0; y <size; y++) //iterating in the y dimension
     {
-        for(int z=0; z<size; z++)
+        for(int z=0; z<size; z++) //iterating in the z dimension
         {
-            for(int x=0; x<size; x++)
+            for(int x=0; x<size; x++) // iterating in the x dimension
             {
                 position = new Vector3(x * spacing, y* spacing, z* spacing);
                 positions.Add(position);
@@ -73,3 +74,33 @@ public List<Vector3> FindOrderedPostions(float spacing, int size)
     return positions;
 }
 ```
+The for loop that we just wrote starts the iteration on the y dimension, then goes into the z dimension and finally into the x dimension. This means that the x dimension will be filled first, followed by the z and then followed byt the y. In other words, assuming the size is 3, our points will be created as follows:
+```
+filling z dimension for (y=0)
+    filling x dimension for(y=0,z=0)
+        0: (0,0,0)
+        1: (1,0,0)
+        2: (2,0,0)
+    filling x dimension for(y=0,z=1)
+        3: (0,1,0)
+        4: (1,1,0)
+        5: (2,1,0)
+    filling x dimension for(y=0,z=2)
+        6: (0,2,0)
+        7: (1,2,0)
+        8: (2,2,0)
+filling z dimension for (y=1)
+    filling x dimension for(y=1,z=0)
+        9: (0,0,1)
+        10: (1,0,1)
+        11: (2,0,1)
+    filling x dimension for (y=1,z=1)
+        12: (0,1,1)
+        13: (1,1,1)
+        14: (2,1,1)
+    filling x dimension for (y=1,z=2)
+        15: (0,2,1)
+        16: (1,2,1)
+        17: (2,2,1)
+  
+    
