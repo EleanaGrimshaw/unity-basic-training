@@ -149,3 +149,4 @@ public void MoveToPlace(int count, float speed, float spacing, int size)
     }
 }
 ```
+When calculating the new position for our cube we used one of the inherent Vector3 methods that is called "MoveTowards". The [MoveTowards](https://docs.unity3d.com/ScriptReference/Vector3.MoveTowards.html) method is responsible for smoothly moving and object from one position to another. It should be called within the Update() and it is responsible for calculating a position in each frame that is a step closer to the target. It will run for as many frames as required until it reaches the target position and then it will stop. 
