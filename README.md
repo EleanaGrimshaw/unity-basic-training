@@ -15,8 +15,8 @@ Unity 2019.3
 * [Geeks For Geeks](https://www.geeksforgeeks.org/)
 
 **Excercises:**
-1. My First Scene
-2. MeshFilter & MeshRenderer
+1. My First Scene - MeshFilter & MeshRenderer
+2. [My First Simple App](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstSimpleApp.md)
 3. [My First Custom Component](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFistCustomComponent.md)
 4. [My First Game Manager](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstManager.md)
 5. My First UI 
