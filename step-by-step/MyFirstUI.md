@@ -149,4 +149,31 @@ public void MoveToPlace(int count, float speed, float spacing, int size)
     }
 }
 ```
-When calculating the new position for our cube we used one of the inherent Vector3 methods that is called "MoveTowards". The [MoveTowards](https://docs.unity3d.com/ScriptReference/Vector3.MoveTowards.html) method is responsible for smoothly moving and object from one position to another. It should be called within the Update() and it is responsible for calculating a position in each frame that is a step closer to the target. It will run for as many frames as required until it reaches the target position and then it will stop. 
+When calculating the new position for our cube, we used one of the inherent Vector3 methods called "MoveTowards". The [MoveTowards](https://docs.unity3d.com/ScriptReference/Vector3.MoveTowards.html) method is responsible for smoothly moving and object from one position to another. It should be called within the Update() and it is responsible for calculating a new position in every frame that is a step closer to the target position. It will run for as many frames as it takes, until it reaches the target position and then it will stop. 
+
+* #### step 6 - expose public variables
+Before jumping into using our new methods to make things happen let's expose some of the variables we are using into the inspector. specifically we should expose variablesthat will handle: the speed, the spacing and the size. We do that by placing them as public variables inside our CubesManager class using the word *public*. The naming can be whatever we like.
+
+```csharp
+public class CubesManager : MonoBehaviour
+{
+
+    public GameObject cube_prefab;
+    public Gradient color_range;
+
+    public int cube_count;
+    public float bounds_x;
+    public float bounds_y;
+    public float bounds_z;
+    
+    public float moving_speed;  //will define the speed of cube movement
+    public float grid_spacing;  //will define the spacing of the ordered positions in the grid
+    pubic int grid_size;        //will define the grid size in the three dimensions
+    
+}
+```
+* #### step 5 - connecting methods to UI elements
+Connecting the UI elements with functionality is quire easy. We see in the inspector that when our UI button is selected there is a field in the **Button** component that says **"On Click()"** followed by the phrase "List is empty". We want to add the methods that we want to be executed in that list. Let's start with the method that randomizes the cubes' positions that is now activated with the "Space" key. we click on the "+" button on the bottom right of the On **Click()** field. Then an item appears in the List which requires a gameobject and a function, Essentially it asks for a method and we need to define which gameobject has the component that contains this method. So we go ahead and drag the Manager gamobject in the gameobject field. As soon as we do that we click the "NoFunction" dropdown which will now have become available and we select the component that holds our method and finally the method itself.
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/add-method.gif?raw=true)
+
