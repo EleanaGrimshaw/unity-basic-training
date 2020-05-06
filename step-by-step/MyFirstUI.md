@@ -22,6 +22,10 @@ The next step is to create and place the actual UI elements which in our case wi
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/Anchors-UI.gif?raw=true)
 
-The button element now considers the top left of the canvas to be it's (0,0,0) and it's movement will now be referenced to this position. We can create spacing by typing into the relevant position fields of the Rect Transform (for accuracy), or simply using the transform gizmo from the toolbar. Let's play the first button to (20,-20,0) and the second at (20,-45,0).
+The button element now considers the top left of the canvas to be it's axis origin (0,0,0) and it's movement will now be referenced to this position. We can create spacing by typing into the relevant position fields of the Rect Transform (for accuracy), or simply using the transform gizmo from the toolbar. Let's place the first button to (20,-20,0) and the second at (20,-45,0).
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/button%20placement.JPG?raw=true)
+
+You can see that the Button gameobject itself has another gameobject as its child and that gameobject holds a **text** components and handles the text label that appears on top of the button. We will change the labels to the two buttons to "order cubes" and "randomize cubes" accordingly. You can also change the appearance of the button by editing the **image** components that is attached on it. In this example we have changed the color to a salmon pink. 
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/button%20editing.jpg?raw=true)
