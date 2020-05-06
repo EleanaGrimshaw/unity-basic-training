@@ -172,6 +172,22 @@ public class CubesManager : MonoBehaviour
     
 }
 ```
+
+Since we have now added the possibility for a grid-like organization to our cubes with specific numbering we need to be able to ensure that the number of random cubes will be equal to the number of grid positions. In order to do that we will ensure that the cube_count variable always has he correct number by calculating the number of grid points at Start().
+```csharp
+void Start()
+{
+    // ensure that the number of cubes matches the grid positions
+    cube_count = grid_size * grid_size * grid_size;
+
+    // call cube generating method
+    GenerateRandomCubes();
+
+    // calculate maximum distance
+    maximum = maxDistance();
+}
+```
+
 * #### step 5 - connecting methods to UI elements
 Connecting the UI elements with functionality is quire easy. We see in the inspector that when our UI button is selected there is a field in the **Button** component that says **"On Click()"** followed by the phrase "List is empty". We want to add the methods that we want to be executed in that list. Let's start with the method that randomizes the cubes' positions that is now activated with the "Space" key. 
 
