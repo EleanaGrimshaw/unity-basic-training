@@ -210,5 +210,5 @@ public void ReshufflePositions()
 }
 ```
 
-Finally you need to add the "EnableMover" method to the second button's "On Click()" list as we did before. You are now good to go. Feel free to hit play and interact with your buttons.
+Finally you need to add the "EnableMover" method to the second button's "On Click()" list as we did before. You are now good to go. Feel free to hit play and interact with the app through your new UI buttons.
 
