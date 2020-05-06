@@ -22,4 +22,6 @@ The next step is to create and place the actual UI elements which in our case wi
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/Anchors-UI.gif?raw=true)
 
+The button element now considers the top left of the canvas to be it's (0,0,0) and it's movement will now be referenced to this position. We can create spacing by typing into the relevant position fields of the Rect Transform (for accuracy), or simply using the transform gizmo from the toolbar. Let's play the first button to (20,-20,0) and the second at (20,-45,0).
 
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/button%20placement.JPG?raw=true)
