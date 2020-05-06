@@ -74,7 +74,7 @@ public List<Vector3> FindOrderedPostions(float spacing, int size)
     return positions;
 }
 ```
-The for loop that we just wrote starts the iteration on the y dimension, then goes into the z dimension and finally into the x dimension. This means that the x dimension will be filled first, followed by the z and then followed byt the y. In other words, assuming the size is 3, our points will be created as follows:
+The for loop that we just wrote starts the iteration on the y dimension, then goes into the z dimension and finally into the x dimension. This means that the x dimension will be filled first, followed by the z and then followed byt the y. In other words, assuming the size is 3, our points will be created with the order they have in the following diagram:
 ```
 filling z dimension for (y=0)
     filling x dimension for(y=0,z=0)
@@ -102,5 +102,19 @@ filling z dimension for (y=1)
         15: (0,2,1)
         16: (1,2,1)
         17: (2,2,1)
-  
-    
+ filling z dimension for (y=2)
+    filling x dimension for(y=2,z=0)
+        9: (0,0,2)
+        10: (1,0,2)
+        11: (2,0,2)
+    filling x dimension for (y=2,z=1)
+        12: (0,1,2)
+        13: (1,1,2)
+        14: (2,1,2)
+    filling x dimension for (y=2,z=2)
+        15: (0,2,2)
+        16: (1,2,2)
+        17: (2,2,2) 
+```
+
+* #### step 4 - create a method that will move the cubes to the ordered positions
