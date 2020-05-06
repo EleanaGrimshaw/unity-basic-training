@@ -43,10 +43,33 @@ public void FindOrderedPostions()
     // this method does not return anything
 }
 ```
-This method will also require a *float* parameter named "spacing", which will define the distance between the grid-ordered positions we will create.
+This method will also require a *float* parameter named "spacing" and an *int* parameter named "size". The spacing parameter will define the distance between the grid-ordered positions we will create, whereas the size parameter will define the number of items in the x, y and z direction of our grid.
 ```csharp
-public List<Vector3> FindOrderedPostions(float spacing)
+public List<Vector3> FindOrderedPostions(float spacing, int size)
 {
     // this method returns a list of Vector3
+}
+```
+As mentioned, this method will create a list of ordered positions based on a grid like structure. In order to do that we will need a *nested for loop*. 
+```csharp
+public List<Vector3> FindOrderedPostions(float spacing, int size)
+{
+    //create and initlaize a List of Vector3 that will store the created positions and will be returned at the end of this method
+    List<Vector3> positions = new List<Vector3>();
+    //create a Vector3 variable that will store the current position
+    Vector3 position;
+    for(int y=0; y <size; y++)
+    {
+        for(int z=0; z<size; z++)
+        {
+            for(int x=0; x<size; x++)
+            {
+                position = new Vector3(x * spacing, y* spacing, z* spacing);
+                positions.Add(position);
+            }
+        }
+    }
+    //return the filled List of odered positions
+    return positions;
 }
 ```
