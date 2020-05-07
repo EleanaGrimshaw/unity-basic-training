@@ -51,7 +51,7 @@ This is our first "if" statement. Its job is to check if a condition is met and 
 ```csharp
 /// logic behind if statement -- not actual code
 
-if(my condition is met)
+if(my condition is TRUE)
 {
     do something
 }
