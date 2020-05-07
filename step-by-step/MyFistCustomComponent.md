@@ -76,7 +76,7 @@ if(number<9)
 }
 else
 {
-    print("my namber is not smaller than nine);
+    print("my namber is not smaller than nine");
 }
 ```
 
@@ -94,7 +94,7 @@ else if(number==9)
 }
 else
 {
-    print("my namber larger than nine);
+    print("my namber larger than nine");
 }
 ```
 
