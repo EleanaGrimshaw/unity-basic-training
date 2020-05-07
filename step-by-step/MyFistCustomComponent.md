@@ -66,6 +66,38 @@ if(number<9)
 }
 ```
 
+the **else** statement will define what will happen if the condition is not met.
+```csharp
+int number = 5;
+
+if(number<9)
+{
+    print("my number is smaller than nine");
+}
+else
+{
+    print("my namber is not smaller than nine)
+}
+```
+
+you can also test multiple cinditions by using the **else if** statement 
+```csharp
+int number = 5;
+
+if(number<9)
+{
+    print("my number is smaller than nine");
+}
+else if(number==9)
+{
+    print("my number is equal to nine")
+}
+else
+{
+    print("my namber larger than nine)
+}
+```
+
 In our CubeHandler component case, we are testing if the Key "D" was pressed by the user.
 
    [- see more for Unity Input System](https://docs.unity3d.com/ScriptReference/Input.html)
