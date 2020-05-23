@@ -14,12 +14,15 @@ Unity 2019.3
 * [Microsoft .Net C# Documentation](https://docs.microsoft.com/en-us/dotnet/)
 * [Geeks For Geeks](https://www.geeksforgeeks.org/)
 
-**Excercises:**
+**Basic Excercises:**
 1. My First Scene - MeshFilter & MeshRenderer
 2. [My First Simple App](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstSimpleApp.md)
 3. [My First Custom Component](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFistCustomComponent.md)
 4. [My First Game Manager](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstManager.md)
 5. [My First UI](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstUI.md) 
+
+**Intermediate Exercises**
+6. Data Visualization
 
 ## description
 This repository provides a guide for the basics of Unity3D and various links to online resources for self-learning.
