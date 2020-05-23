@@ -23,7 +23,7 @@ Unity 2019.3
 
 **Intermediate Exercises:**
 
-6. Data Visualization
+6. [Data Visualization](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/DataVisualization.md)
 
 ## description
 This repository provides a guide for the basics of Unity3D and various links to online resources for self-learning.
