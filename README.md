@@ -22,6 +22,7 @@ Unity 2019.3
 5. [My First UI](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstUI.md) 
 
 **Intermediate Exercises:**
+
 6. Data Visualization
 
 ## description
