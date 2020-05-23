@@ -21,7 +21,7 @@ Unity 2019.3
 4. [My First Game Manager](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstManager.md)
 5. [My First UI](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstUI.md) 
 
-**Intermediate Exercises**
+**Intermediate Exercises:**
 6. Data Visualization
 
 ## description
