@@ -2,7 +2,7 @@
 
 ### description
 
-This exercise will guide you through creating a city based Data visualization app. The building 3D geometries will be imported in Unity and their corresponding data will be read from a csv file. You will then learn how to create data holding classes in order to store the incoming building information and query them at any time during gametime. Finally you will create a user interface that binds everything together and provides an interactive app with layers and object information.
+This exercise will guide you through creating a city based Data visualization app. The building 3D geometries will be imported in Unity and their corresponding data will be read from a [csv](https://en.wikipedia.org/wiki/Comma-separated_values) file. You will then learn how to create data holding classes in order to store the incoming building information and query them at any time during gametime. Finally you will create a user interface that binds everything together and provides an interactive app with layers and object information.
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/CityViewer.gif?raw=true)
 
@@ -65,8 +65,8 @@ public class DataReader : MonoBehaviour
 ```
 The first variable is the name of our csv file which we will have to provide to the component from the inspector. The other two variables will diplay the incoming data when we read our csv.
 
-* #### step 5 - create the csv reader method
-The next step is to write the method that will be responsible for parsing the csv file. First we need to include two additional libraries to our script and these are "System.IO" and "System.Linq". We do that with the "using" keyword at the top of our script.
+* #### step 5 - include additional libraries
+in order to write the method that will be responsible for parsing the csv file, we need to include two additional libraries to our script first. These are "System.IO" and "System.Linq". We do that with the "using" keyword at the top of our script.
 
 it should go from:
 ```csharp
@@ -100,3 +100,13 @@ public class DataReader : MonoBehaviour
 .....
 ```
 
+* #### step 6 - create the csv reader method
+We will now start writing the csv reader method. Let's name it "ReadDataFromFile" and defin a few local variables. 
+```csharp
+void ReadDataFromFile()
+{
+    buildingData current_data;
+    string path;
+}
+```
+In this method we will read the csv
