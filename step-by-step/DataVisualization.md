@@ -39,5 +39,5 @@ public class DataBounds
     public int min_age;
 }
 ```
-We are using the [System.Serializable] tag
+Since we did not inherit from Monobehaviour, We are using the [System.Serializable] [attribute](https://docs.unity3d.com/Manual/Attributes.html) in order to ensure [serialization] for our classes. In general, serialization is the automatic process of transforming data structures or object states into a format that Unity can store and reconstruct later. In simple words, we need this attribute to be able to see these classes in the inspector as you find out further down this exercise. 
 
