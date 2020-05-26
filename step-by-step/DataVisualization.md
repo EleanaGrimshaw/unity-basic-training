@@ -109,4 +109,5 @@ void ReadDataFromFile()
     string path;
 }
 ```
-In this method we will read the csv as seperate **lines** and then we will iterate through the lines and **split** at the commas ',' to extract the specific data. The **current_data** variable will be used to create new instances of the "BuildingData" class for each new line of the csv and the store the instances in the "Data" list of BuildingData we created at the begining of the script.
+In this method we will read the csv as seperate **lines** and then we will iterate through the lines and **split** at the commas ',' to extract the specific data. The **current_data** variable will be used to create new instances of the "BuildingData" class for each new line of the csv and the store the instances in the "Data" list of BuildingData we created at the begining of the script. In order to read the csv file first we need to provide the path directory where it is located. We create and store the path in a string variable.
+
