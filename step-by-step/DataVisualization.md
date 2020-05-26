@@ -20,7 +20,7 @@ Before jumping into the script responsible for loading and reading the csv, we w
 The first class will look like that:
 ```csharp
 [System.Serializable]
-public class buildingData 
+public class BuildingData 
 {
     public int ID;
     public float height;
@@ -41,3 +41,4 @@ public class DataBounds
 ```
 Since we did not inherit from Monobehaviour, We are using the [System.Serializable] [attribute](https://docs.unity3d.com/Manual/Attributes.html) in order to ensure [serialization](https://docs.unity3d.com/Manual/script-Serialization.html) for our classes. In general, serialization is the automatic process of transforming data structures or object states into a format that Unity can store and reconstruct later. In simple words, we need this attribute to be able to see these classes in the inspector as you find out further down this exercise. 
 
+* #### step 4 - create a script for data reading
