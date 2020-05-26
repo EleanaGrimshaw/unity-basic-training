@@ -51,7 +51,7 @@ public class DataReader : MonoBehaviour
     public DataBounds bounds;
     public List<buildingData> Data = new List<buildingData>();
     
-        void Start()
+    void Start()
     {
 
     }
@@ -64,3 +64,37 @@ public class DataReader : MonoBehaviour
 }
 ```
 The first variable is the name of our csv file which we will have to provide to the component from the inspector. The other two variables will diplay the incoming data when we read our csv.
+
+* #### step 5 - create the csv reader method
+The next step is to write the method that will be responsible for parsing the csv file. First we need to include two additional libraries to our script and these are "System.IO" and "System.Linq". We do that with the "using" keyword at the top of our script.
+it should go from:
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DataReader : MonoBehaviour
+{
+    public string csv_name;
+    public DataBounds bounds;
+    public List<buildingData> Data = new List<buildingData>();
+    
+.....
+```
+To:
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.IO;
+using System.Linq;
+
+public class DataReader : MonoBehaviour
+{
+    public string csv_name;
+    public DataBounds bounds;
+    public List<buildingData> Data = new List<buildingData>();
+    
+.....
+```
+
