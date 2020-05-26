@@ -12,7 +12,7 @@ This exercise will guide you through creating a city based Data visualization ap
 You can find and download the 3D model in the [exercise resources](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Exercise%20Resources/Exercise_5/sorted_buildings.fbx). Import the 3D model into Unity by dragiing it into the previously created 3D models folder inside your Assets. AFter that you can place it in your Scene. Notice how there is a parent gameobject with nothing but a transform component that contains all the building geometries as children, similar to what we had in the [exercise 4](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstManager.md).
 
 * #### step 2 - import csv in StreamingAssets folder
-The next step is to import the csv file with all the building data. We will go to the Assets in the Project Window and create a new folder called **StreamingAssets**, beware that the name is case-sensitive so make sure you copy the name correctly. [StreamingAssets](https://docs.unity3d.com/Manual/StreamingAssets.html) is a special kind of folder that is often used for loading resources that live in your Assets during runtime as we will see further along this exercise. 
+The next step is to import the csv file with all the building data. You can find and download the file from the [exercise resources](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Exercise%20Resources/Exercise_5/Data_1.csv) We will go to the Assets in the Project Window and create a new folder called **StreamingAssets**, beware that the name is case-sensitive so make sure you copy the name correctly. [StreamingAssets](https://docs.unity3d.com/Manual/StreamingAssets.html) is a special kind of folder that is often used for loading resources that live in your Assets during runtime as we will see further along this exercise. Drag and drop the csv file inside the "StreamingAssets" folder.
 
 * #### step 3 - create data storing classes
 Before jumping into the script responsible for loading and reading the csv, we will first create two custom class that will be responsible for holding the data related to each building. These classes will be named "BuildingData" and "DataBounds" respectively. Our new classes will not inherit from the MonoBehaviour base class as is the default setting because we are not interested in them having any Unity-related functionality but instead we need them merely to store some data.
@@ -47,8 +47,9 @@ We are now ready to start writing the code that will handle reading the building
 ```csharp
 public class DataReader : MonoBehaviour
 {
-    public string csv;
+    public string csv_name;
     public DataBounds bounds;
     public List<buildingData> Data = new List<buildingData>();
 }
 ```
+The first variable is the name of our csv file which we will have to provide to the component from the inspector. The other two variables will diplay the incoming data when we read our csv.
