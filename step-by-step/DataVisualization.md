@@ -67,6 +67,7 @@ The first variable is the name of our csv file which we will have to provide to 
 
 * #### step 5 - create the csv reader method
 The next step is to write the method that will be responsible for parsing the csv file. First we need to include two additional libraries to our script and these are "System.IO" and "System.Linq". We do that with the "using" keyword at the top of our script.
+
 it should go from:
 ```csharp
 using System.Collections;
