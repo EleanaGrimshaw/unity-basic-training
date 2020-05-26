@@ -42,4 +42,13 @@ public class DataBounds
 Since we did not inherit from Monobehaviour, We are using the [System.Serializable] [attribute](https://docs.unity3d.com/Manual/Attributes.html) in order to ensure [serialization](https://docs.unity3d.com/Manual/script-Serialization.html) for our classes. In general, serialization is the automatic process of transforming data structures or object states into a format that Unity can store and reconstruct later. In simple words, we need this attribute to be able to see these classes in the inspector as you find out further down this exercise. 
 
 * #### step 4 - create a script for data reading
-We are now ready to start writing the code that will handle reading the building data from the csv file. We will create a new script named "DataReader" and attach it on the parent gameobject that holds all building geometries. 
+We are now ready to start writing the code that will handle reading the building data from the csv file. We will create a new c# component named "DataReader" and attach it on the parent gameobject that holds all building geometries. Let's introduce some public variables.
+
+```csharp
+public class DataReader : MonoBehaviour
+{
+    public string csv;
+    public DataBounds bounds;
+    public List<buildingData> Data = new List<buildingData>();
+}
+```
