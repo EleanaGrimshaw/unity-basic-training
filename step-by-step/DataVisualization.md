@@ -50,6 +50,17 @@ public class DataReader : MonoBehaviour
     public string csv_name;
     public DataBounds bounds;
     public List<buildingData> Data = new List<buildingData>();
+    
+        void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
 ```
 The first variable is the name of our csv file which we will have to provide to the component from the inspector. The other two variables will diplay the incoming data when we read our csv.
