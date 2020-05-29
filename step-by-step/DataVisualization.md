@@ -150,7 +150,7 @@ void ReadDataFromFile()
         // split the current string item at every ','
         string[] line_data = file_data[i].Split(',');
 
-        // fille the corresponding values of the current BuildingData instance
+        // fill the corresponding values of the current BuildingData instance
         current_data.ID = int.Parse(line_data[0]);
         current_data.height = float.Parse(line_data[1]);
         current_data.c_date = int.Parse(line_data[2]);
@@ -159,4 +159,12 @@ void ReadDataFromFile()
         Data.Add(current_data);
     }
 }
+```
+We iterate the string items of the file_data array and we split at the commas ',' with the [String.Split()](https://docs.microsoft.com/en-us/dotnet/api/system.string.split?view=netcore-3.1#System_String_Split_System_Char___) method providing the character (char type) that defines the split. this will return a new string array with the separate string segments after the split.
+```
+example:
+the first item of the file_data contains a string:
+--- file_data[0] = "0,54.892197,1980,other"
+after splitting this string we get a new string array line_data that contains four string items:
+--- line_data = {"0","54.892197","1980","other"}
 ```
