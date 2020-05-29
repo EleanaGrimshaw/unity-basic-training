@@ -160,11 +160,13 @@ void ReadDataFromFile()
     }
 }
 ```
-We iterate the string items of the file_data array and we split at the commas ',' with the [String.Split()](https://docs.microsoft.com/en-us/dotnet/api/system.string.split?view=netcore-3.1#System_String_Split_System_Char___) method providing the character (char type) that defines the split. this will return a new string array with the separate string segments after the split.
+We iterate the string items of the file_data array and we split at the commas ',' with the [String.Split()](https://docs.microsoft.com/en-us/dotnet/api/system.string.split?view=netcore-3.1#System_String_Split_System_Char___) method providing the character (char type) that defines the split. this will return a new string array with the separate string segments after the split. We also create a new instance of the BuildingData class that will store the corresponding data of this line.
 ```
 example:
+
 the first item of the file_data contains a string:
 --- file_data[0] = "0,54.892197,1980,other"
 after splitting this string we get a new string array line_data that contains four string items:
 --- line_data = {"0","54.892197","1980","other"}
 ```
+In order to assign the extracted values to the corresponding data of the BuildingData instance we need to convert them to the correct types since they are now all of type string. We can achieve that by typing the type of variable we need to convert the string to followed by the word "Parse". After filling all its values we add the BuildingData instance to the corresponding List we created in the beginning of the script. 
