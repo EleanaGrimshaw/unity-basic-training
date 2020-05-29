@@ -139,18 +139,23 @@ void ReadDataFromFile()
     
     path = Path.Combine(Application.streamingAssetsPath, csv + ".csv");
     string[] file_data = File.ReadAllLines(path);
+    
+    // store the amount of items inside the file_data array
     int line_count = file_data.Length;
+    // iterate the items of the file_data array
     for(int i=1; i<line_count; i++)
     {
-        current_data = new buildingData();
+        // create a new instance of the BuildingData class for each line
+        current_data = new BuildingData();
+        // split the current string item at every ','
         string[] line_data = file_data[i].Split(',');
 
+        // fille the corresponding values of the current BuildingData instance
         current_data.ID = int.Parse(line_data[0]);
         current_data.height = float.Parse(line_data[1]);
         current_data.c_date = int.Parse(line_data[2]);
         current_data.use = line_data[3];
-        FindDataBounds(current_data);
-
+        // add the completed BuildingData instance to the designated list of BuildingData
         Data.Add(current_data);
     }
 }
