@@ -109,5 +109,49 @@ void ReadDataFromFile()
     string path;
 }
 ```
-In this method we will read the csv as seperate **lines** and then we will iterate through the lines and **split** at the commas ',' to extract the specific data. The **current_data** variable will be used to create new instances of the "BuildingData" class for each new line of the csv and the store the instances in the "Data" list of BuildingData we created at the begining of the script. In order to read the csv file first we need to provide the path directory where it is located. We create and store the path in a string variable.
+In this method we will read the csv as seperate **lines** and then we will iterate through the lines and **split** at the commas ',' to extract the specific data. The **current_data** variable will be used to create new instances of the "BuildingData" class, one for each new line of the csv and then store the instances in the "Data" list of BuildingData we created at the begining of the script. In order to read the csv file first we need to provide the path directory where it is located. We create and store the path in a string variable.
+```csharp
+void ReadDataFromFile()
+{
+    buildingData current_data;
+    string path;
+    
+    path = Path.Combine(Application.streamingAssetsPath, csv + ".csv");
+}
+```
+The [Path.Combine()](https://docs.microsoft.com/en-us/dotnet/api/system.io.path.combine?view=netcore-3.1) method essentially combines different string segments and creates a directory path. In our case, we are taking advantage the StreamingAssets folder by extracting its path automatically through the method [Application.streamingAssetsPath](https://docs.unity3d.com/ScriptReference/Application-streamingAssetsPath.html). After that we combine it with tha name of our csv file and the filetype specification ".csv". We are now read to read the selected file. 
+```csharp
+void ReadDataFromFile()
+{
+    buildingData current_data;
+    string path;
+    
+    path = Path.Combine(Application.streamingAssetsPath, csv + ".csv");
+    string[] file_data = File.ReadAllLines(path);
+}
+```
+The [File.ReadAllLines()](https://docs.microsoft.com/en-us/dotnet/api/system.io.file.readalllines?view=netcore-3.1) method will read the file in the specified directory and will **return** an array of strings as large as the amount of seperate lines in the csv file. We store the resulting array in a local string array variable named file_data. The next step will be to iterate through the lines of csv data and split wherever we find a comma ','.
+```csharp
+void ReadDataFromFile()
+{
+    buildingData current_data;
+    string path;
+    
+    path = Path.Combine(Application.streamingAssetsPath, csv + ".csv");
+    string[] file_data = File.ReadAllLines(path);
+    int line_count = file_data.Length;
+    for(int i=1; i<line_count; i++)
+    {
+        current_data = new buildingData();
+        string[] line_data = file_data[i].Split(',');
 
+        current_data.ID = int.Parse(line_data[0]);
+        current_data.height = float.Parse(line_data[1]);
+        current_data.c_date = int.Parse(line_data[2]);
+        current_data.use = line_data[3];
+        FindDataBounds(current_data);
+
+        Data.Add(current_data);
+    }
+}
+```
