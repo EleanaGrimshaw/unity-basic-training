@@ -170,3 +170,70 @@ after splitting this string we get a new string array line_data that contains fo
 --- line_data = {"0","54.892197","1980","other"}
 ```
 In order to assign the extracted values to the corresponding data of the BuildingData instance we need to convert them to the correct types since they are now all of type string. We can achieve that by typing the type of variable we need to convert the string to followed by the word "Parse". After filling all its values we add the BuildingData instance to the corresponding List we created in the beginning of the script. 
+
+* #### step 7 - create bounds method
+The next method we want to create is the one that will enable us to know the minimum and maximum values for each incoming data category. We will store this information in the instance of the DataBounds class we declared at the begining of the script. The first thing we need to do is to initialize the bounds values to something extremely different that waht we expect them to be. We do that in **Start()**.
+```csharp
+void Start()
+{
+    // initialize bounds values
+    bounds.max_height = 0;
+    bounds.min_height = 100000;
+    bounds.max_age = a_max; = 0;
+    bounds.min_age = 100000;
+}
+```
+The we will create a method that will cross reference the existing bounds values with the current values our csv reader script is reading in every iteration. We will name this method "FindDataBounds" and it will take one parameter of type BuildingData.
+```csharp
+void FindDataBounds(buildingData data_now)
+{
+    if (bounds.max_height < data_now.height)
+    {
+        bounds.max_height = data_now.height;
+    }
+    if (bounds.min_height > data_now.height)
+    {
+        bounds.min_height = data_now.height;
+    }
+    if (bounds.max_age < data_now.c_date)
+    {
+        bounds.max_age = data_now.c_date;
+    }
+    if (bounds.min_age > data_now.c_date)
+    {
+        bounds.min_age = data_now.c_date;
+    }
+}
+```
+We are going to call our new methos inside our ReadDataFromFile method once in every iteration of our for loop.
+void ReadDataFromFile()
+{
+    buildingData current_data;
+    string path;
+    
+    path = Path.Combine(Application.streamingAssetsPath, csv + ".csv");
+    string[] file_data = File.ReadAllLines(path);
+    
+    // store the amount of items inside the file_data array
+    int line_count = file_data.Length;
+    // iterate the items of the file_data array
+    for(int i=1; i<line_count; i++)
+    {
+        // create a new instance of the BuildingData class for each line
+        current_data = new BuildingData();
+        // split the current string item at every ','
+        string[] line_data = file_data[i].Split(',');
+
+        // fill the corresponding values of the current BuildingData instance
+        current_data.ID = int.Parse(line_data[0]);
+        current_data.height = float.Parse(line_data[1]);
+        current_data.c_date = int.Parse(line_data[2]);
+        current_data.use = line_data[3];
+        // update data bounds 
+        FindDataBounds(current_data);
+        // add the completed BuildingData instance to the designated list of BuildingData
+        Data.Add(current_data);
+    }
+}
+```
+In this way we are sure that the bounds will be updated and by the end of the for loop we will have calculated the bounds values of the incoming data.
