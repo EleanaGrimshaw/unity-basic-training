@@ -205,7 +205,7 @@ void FindDataBounds(buildingData data_now)
     }
 }
 ```
-We are going to call our new methos inside our ReadDataFromFile method once in every iteration of our for loop.
+We are going to call our new method inside our ReadDataFromFile method once in every iteration of our for loop.
 ```csharp
 void ReadDataFromFile()
 {
@@ -237,4 +237,16 @@ void ReadDataFromFile()
     }
 }
 ```
-In this way we are sure that the bounds will be updated and by the end of the for loop we will have calculated the bounds values of the incoming data.
+In this way we are sure that the bounds will be updated and by the end of the for loop we will have calculated the bounds values of the incoming data. Finally we will call our ReadDataFromFile method in Start() so that we read all incoming data when the app begins.
+```csharp
+void Start()
+{
+    // initialize bounds values
+    bounds.max_height = 0;
+    bounds.min_height = 100000;
+    bounds.max_age = a_max; = 0;
+    bounds.min_age = 100000;
+    
+    ReadDataFromFile();
+}
+```
