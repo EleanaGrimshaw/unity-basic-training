@@ -250,3 +250,9 @@ void Start()
     ReadDataFromFile();
 }
 ```
+Attach the "DataReader" script to the bulding parent gameobject and hit Play. You will be able to see in the inspector the incoming data we read. 
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/UnityInfo.gif?raw=true)
+
+* #### step 8 - create UIManager script
+We are now going to create a manager script which will be 
