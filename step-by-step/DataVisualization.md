@@ -254,5 +254,12 @@ Attach the "DataReader" script to the bulding parent gameobject and hit Play. Yo
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/UnityInfo.gif?raw=true)
 
-* #### step 8 - create UIManager script
-We are now going to create a manager script which will be 
+* #### step 8 - the camera script
+It is now time to add some functionality to our camera so we can pan, zoom and rotate through the mouse. In order to do that we will create a new script named "MoveCamera". You can copy paste the camera functionality from the attached script in the exercise resources found [here](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Exercise%20Resources/Exercise_5/MoveCamera.cs). The camera functionality is outside the scope of this exercise so we will not explain how it works. Fell free to study it by yourselves. Attach the script as a component on the camera gameobject and play around with the corresponding speeds for pan zoom and rotate accordin g to your preference. 
+
+* #### step 9 - create the UI elements
+We now have imported all the building data inside our project and we have them stored and categorized. The next step will be to start visualizing the data. Because we will be overlaying different kinds of information on top of our buildings and we need to provide some sort of control over this visualization, we will create a user interface that will enable the user select different kinds of data. We will also create a UIManager script that will handle all UI interactions. Let's start from the user interface. 
+
+We need to add a Canvas Gameobject that will hold all the other UI elements. Similarly to [exercise 4](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstUI.md#step-1---create-the-canvas) we will set the rendering mode to **Screen Space-Overlay**. We can then go ahead and create the rest of the elements we will need. As you can see in the diagram below, all the UI elements live within a specific part of the canvas on the left hand side of the screen. This element is called **panel**.
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/canvas_viz3.jpg?raw=true)
