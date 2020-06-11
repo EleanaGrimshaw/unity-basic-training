@@ -258,10 +258,18 @@ Attach the "DataReader" script to the bulding parent gameobject and hit Play. Yo
 It is now time to add some functionality to our camera so we can pan, zoom and rotate through the mouse. In order to do that we will create a new script named "MoveCamera". You can copy paste the camera functionality from the attached script in the exercise resources found [here](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Exercise%20Resources/Exercise_5/MoveCamera.cs). The camera functionality is outside the scope of this exercise so we will not explain how it works. Fell free to study it by yourselves. Attach the script as a component on the camera gameobject and play around with the corresponding speeds for pan zoom and rotate accordin g to your preference. 
 
 * #### step 9 - create the UI elements
-We now have imported all the building data inside our project and we have them stored and categorized. The next step will be to start visualizing the data. Because we will be overlaying different kinds of information on top of our buildings and we need to provide some sort of control over this visualization, we will create a user interface that will enable the user select different kinds of data. We will also create a UIManager script that will handle all UI interactions. Let's start from the user interface. 
+We now have imported all the building data inside our project and we have them stored and categorized. The next step will be to start visualizing the data. Because we will be overlaying different kinds of information on top of our buildings and we need to provide some sort of control over this visualization, we will create a **user interface** that will enable the user to select different kinds of data. We will also create a **UIManager** script that will handle all UI interactions. Let's start from the user interface. 
 
 We need to add a Canvas Gameobject that will hold all the other UI elements. Similarly to [exercise 4](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/step-by-step/MyFirstUI.md#step-1---create-the-canvas) we will set the rendering mode to **Screen Space-Overlay**. We can then go ahead and create the rest of the elements we will need. As you can see in the diagram below, all the UI elements live within a specific part of the canvas on the left hand side of the screen. This element is called **panel**.
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/canvas_viz3.jpg?raw=true)
 
-The panel is nothing more than a gameobject with a RectTransform, a CanavasRenderer and an Image component attached. It has not immediate interactivity, it is however useful as a container of other ui elements. We create a panel and anchor it to the top left corner of the screen holding down both **alt** and **shift** in the anchor presets menu. We sill not affect it's height, as we want it to span accross the whole scrren, but we will adjust it's width to 350.
+The panel is nothing more than a gameobject with a RectTransform, a CanavasRenderer and an Image component attached. It has not immediate interactivity, it is however useful as a container of other ui elements. We create a panel and anchor it to the top left corner of the screen holding down both **alt** and **shift** in the anchor presets menu. We sill not affect it's height, as we want it to span accross the whole scrren, but we will adjust it's width to 350. 
+
+Our user interface will be combined from a combination of UI elements, some of them will be **nested** inside other UI elements, as you can see in the diagram below.
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/interface_overall.jpg?raw=true)
+
+We will organize the interface in sections, each of which will have its own panel. Let's go ahead and generate the UI elements as they are depicted in the diagram. *-see image below*
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/canvas_data_viz.JPG?raw=true)
