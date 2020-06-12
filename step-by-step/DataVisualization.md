@@ -264,7 +264,7 @@ We need to add a Canvas Gameobject that will hold all the other UI elements. Sim
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/canvas_viz3.jpg?raw=true)
 
-The panel is nothing more than a gameobject with a RectTransform, a CanavasRenderer and an Image component attached. It has not immediate interactivity, it is however useful as a container of other ui elements. We create a panel and anchor it to the top left corner of the screen holding down both **alt** and **shift** in the anchor presets menu. We sill not affect it's height, as we want it to span accross the whole scrren, but we will adjust it's width to 350. 
+The panel is nothing more than a gameobject with a RectTransform, a CanavasRenderer and an Image component attached. It has not immediate interactivity, it is however useful as a container of other ui elements. We create a panel and anchor it to the top left corner of the screen holding down both **alt** and **shift** in the anchor presets menu. Let's name this "Main Panel". We will not affect it's height, as we want it to span accross the whole scrren, but we will adjust it's width to 350. 
 
 Our user interface will be combined from a combination of UI elements, some of them will be **nested** inside other UI elements, as you can see in the diagram below.
 
@@ -274,7 +274,40 @@ We will organize the interface in sections, each of which will have its own pane
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/canvas_data_viz.JPG?raw=true)
 
+
+
 Before we jump into a more detailed description on how to create our user interface elements, let's import the [TextMeshPro](https://docs.unity3d.com/Manual/com.unity.textmeshpro.html) package from our [package manager](https://docs.unity3d.com/Manual/Packages.html). TextMeshPro is an upgraded solution for displaying text within Unity compared to  Unity’s UI Text and the legacy Text Mesh. We will use it for all Text elements in our app. Navigate to Window>PackageManager and search for TextMeshPro. Click install, to install the package.
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/tmpro.JPG?raw=true)
 
++++.........
+
+* #### step 10 - create the UI manager script
+We are now going to create the UIManager script which will be responsible to connect all user-interactions with our interface to the corresponding methods that will change the building visualization. Let's create an empty gameobject and name it "UI_Manager". Then create an new c# script and name it UIManager. Attach the new script to the empty UI_Manager gameobject and let's open the script in Visual Studio.
+
+First we need to add some public global variables in order to **reference** some things from the inspector
+```csharp
+public class UIManger : MonoBehaviour
+{
+    [Header("Referenced Elements")]
+    public GameObject city;
+    
+    [Header("Visualization Elements")]
+    public Color default_color;
+    public Gradient height_colors;
+    public Gradient age_colors;
+    public List<Color> use_colors;
+    
+    void Start()
+    {
+    
+    }
+    
+    void Update()
+    {
+    
+    }
+}
+```
+
+We are using the [Header attribute](https://docs.unity3d.com/ScriptReference/HeaderAttribute.html) in order to be able to categorize our inputs in the inspector. 
