@@ -273,3 +273,8 @@ Our user interface will be combined from a combination of UI elements, some of t
 We will organize the interface in sections, each of which will have its own panel. Let's go ahead and generate the UI elements as they are depicted in the diagram. *-see image below*
 
 ![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/canvas_data_viz.JPG?raw=true)
+
+Before we jump into a more detailed description on how to create our user interface elements, let's import the [TextMeshPro](https://docs.unity3d.com/Manual/com.unity.textmeshpro.html) package from our [package manager](https://docs.unity3d.com/Manual/Packages.html). TextMeshPro is an upgraded solution for displaying text within Unity compared to  Unity’s UI Text and the legacy Text Mesh. We will use it for all Text elements in our app. Navigate to Window>PackageManager and search for TextMeshPro. Click install, to install the package.
+
+![Image](https://github.com/EleanaGrimshaw/unity-basic-training/blob/master/Image%20Links/tmpro.JPG?raw=true)
+
