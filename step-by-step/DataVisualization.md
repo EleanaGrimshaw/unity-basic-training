@@ -310,4 +310,33 @@ public class UIManger : MonoBehaviour
 }
 ```
 
-We are using the [Header attribute](https://docs.unity3d.com/ScriptReference/HeaderAttribute.html) in order to be able to categorize our inputs in the inspector. 
+We are using the [Header attribute](https://docs.unity3d.com/ScriptReference/HeaderAttribute.html) in order to be able to categorize our inputs in the inspector. Then we also create some global variables that are not exposed to the inspector.
+
+```csharp
+public class UIManger : MonoBehaviour
+{
+    [Header("Referenced Elements")]
+    public GameObject city;
+    
+    [Header("Visualization Elements")]
+    public Color default_color;
+    public Gradient height_colors;
+    public Gradient age_colors;
+    public List<Color> use_colors;
+    
+    // non-public global variables
+    List<buildingData> imported_data;
+    int building_count;
+    public DataBounds incoming_bounds;
+    
+    void Start()
+    {
+    
+    }
+    
+    void Update()
+    {
+    
+    }
+}
+```
