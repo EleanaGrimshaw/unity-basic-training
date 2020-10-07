@@ -17,15 +17,25 @@ public class CubesManager : MonoBehaviour
     public float bounds_y;
     public float bounds_z;
 
+    public bool start_moving;
+    public float grid_spacing;
+    public float max_distance;
+    public float moving_speed;
+    public int grid_size;
+
 
     RaycastHit hit;
     Ray ray;
     GameObject attractor;
     float maximum;
+    List<Vector3> ordered_positions;
 
     // Start is called before the first frame update
     void Start()
     {
+        // ensure that the number of cubes matches the grid positions
+        cube_count = grid_size * grid_size * grid_size;
+
         // call cube generating method
         GenerateRandomCubes();
 
@@ -47,19 +57,24 @@ public class CubesManager : MonoBehaviour
             {
                 // find out which object was hit, this cube will be our attractor
                 attractor = hit.transform.gameObject;
-                print("hit "+ attractor.name);
-                DistanceFromAttractor(attractor, maximum);
+                //print("hit "+ attractor.name);
+                DistanceFromAttractor(attractor, max_distance);
                 
             }
             else
             {
-                print("no objects were hit");
+                //print("no objects were hit");
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ReshufflePositions();
+        }
+
+        if (start_moving)
+        {
+            MoveToPlace(cube_count, moving_speed,grid_spacing,grid_size);
         }
     }
 
@@ -99,8 +114,14 @@ public class CubesManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Iterates through the existing cubes and calculates their distance from the attractor, based on that distance the cubes get colored through the PaintByDistance method.
+    /// </summary>
+    /// <param name="_attractor"></param>
+    /// <param name="max_distance"></param>
     public void DistanceFromAttractor(GameObject _attractor, float max_distance)
     {
+        // --- method variables
         GameObject current;
         Vector3 current_pos;
         Vector3 attractor_pos;
@@ -108,6 +129,8 @@ public class CubesManager : MonoBehaviour
 
         float distance;
         float color_t;
+
+        // --- method code
 
         //0. store attractor cube's position
         attractor_pos = _attractor.transform.position;
@@ -144,6 +167,7 @@ public class CubesManager : MonoBehaviour
 
     public void ReshufflePositions()
     {
+        start_moving = false;
         // create the variables that will hold the random x, y, and z numbers for each position
         float _x;
         float _y;
@@ -172,5 +196,47 @@ public class CubesManager : MonoBehaviour
         Vector3 min = Vector3.zero;
         Vector3 max = new Vector3(bounds_x, bounds_y, bounds_z);
         return Vector3.Distance(min, max);
+    }
+
+    public List<Vector3> FindOrderedPostions(float spacing, int size)
+    {
+        List<Vector3> positions = new List<Vector3>();
+        Vector3 position;
+        for(int y=0; y < size; y++)
+        {
+            for(int z=0; z< size; z++)
+            {
+                for(int x=0; x< size; x++)
+                {
+                    position = new Vector3(x * spacing, y* spacing, z* spacing);
+                    positions.Add(position);
+                }
+            }
+        }
+
+        return positions;
+    }
+
+    public void MoveToPlace(int count, float speed, float spacing, int size)
+    {
+        List<Vector3> new_positions = FindOrderedPostions(spacing, size);
+        GameObject current_cube;
+        Vector3 current_pos;
+        Vector3 mover;
+
+
+        for (int i = 0; i < count; i++)
+        {
+            current_cube = transform.GetChild(i).gameObject;
+            current_pos = current_cube.transform.position;
+            mover = Vector3.MoveTowards(current_pos, new_positions[i], speed);
+            current_cube.transform.position = mover;
+        }
+
+    }
+
+    public void EnableMover()
+    {
+        start_moving = true;
     }
 }

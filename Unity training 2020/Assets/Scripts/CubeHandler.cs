@@ -11,13 +11,20 @@ public class CubeHandler : MonoBehaviour
 
     public int counter = 0;
 
+    
+
+    
+
+
     // variable that will store the material of the cube at a given time
-   
+
 
     // Start is called before the first frame update
     void Start()
     {
-       start_material = gameObject.GetComponent<MeshRenderer>().sharedMaterial;
+        start_material = gameObject.GetComponent<MeshRenderer>().sharedMaterial;
+
+
     }
 
     // Update is called once per frame
@@ -60,7 +67,9 @@ public class CubeHandler : MonoBehaviour
         */
         #endregion
 
-        if (Input.GetKeyDown(KeyCode.D))
+        
+
+        if (Input.GetKeyDown("d"))
         {
             ChangeMaterial();
         }

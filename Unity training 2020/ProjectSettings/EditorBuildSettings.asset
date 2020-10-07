@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Simple_RigidBodies.unity
+    guid: 2e09cb9a0e27b274ca70a22a24985471
+  - enabled: 1
+    path: Assets/Scenes/Training Exercises/SimplePhysics.unity
+    guid: defb45ceefe2094499d02f7db6a3e823
   m_configObjects: {}
